@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html class="page  no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <title>Listing-app</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+function cth(c){document.documentElement.classList.add(c)}
+'ontouchstart' in window?cth('touch'):cth('no-touch');
+if(typeof InstallTrigger!=='undefined')cth('firefox');
+if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+if(~navigator.appVersion.indexOf("Win"))cth('windows');
+if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+</script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <div class="page-header__row"><a class="logo" href="/"><img src="img/logo-top.svg" alt="Logo" width="106" height="35" /></a>
+            <div class="search">
+              <form class="search__form search__row" action="/search/" method="get"><input class="search__text" type="text" name="q" placeholder="Поиск" /><button class="search__submit"><svg class="icon-search" width="17px" height="17px">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg></button></form><svg class="icon-search" id="icon-search" width="17px" height="17px">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </div>
+            <div class="login"><a class="login__in" href="#">Вход</a><span>|</span><a class="login__regisrer" href="#">Регистрация</a></div>
+            <div class="language"><a class="header-menu__link header-menu__language" id="header-menu__language" href="#"><span> RU </span>
+                <div class="svg"> <svg class="flags" width="14px" height="14px">
+                    <use xlink:href="img/sprite.svg#russia"></use>
+                  </svg></div>
+              </a>
+              <ul class="header-menu__language-list" id="language-list">
+                <li><a class="flagsen" href="#">
+                    <div class="svg"><svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#en"></use>
+                      </svg></div><span>EN</span>
+                  </a></li>
+                <li><a class="flagscn" href="#">
+                    <div class="svg"><svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#china"></use>
+                      </svg></div><span>中文</span>
+                  </a></li>
+                <li><a class="flagsde" href="#">
+                    <div class="svg"><svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#ge"></use>
+                      </svg></div><span>DE</span>
+                  </a></li>
+                <li><a class="flagsit" href="#">
+                    <div class="svg"><svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#italy"></use>
+                      </svg></div><span>IT</span>
+                  </a></li>
+                <li><a class="flagsesp" href="#">
+                    <div class="svg"><svg class="flags" width="18px" height="18px">
+                        <use xlink:href="img/sprite.svg#spain"></use>
+                      </svg></div><span>ES</span>
+                  </a></li>
+                <li><a class="flagsesp" href="#">
+                    <div class="svg"><svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#france"></use>
+                      </svg></div><span>FR</span>
+                  </a></li>
+                <li><a class="flagsport" href="#">
+                    <div class="svg"> <svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#portugal"></use>
+                      </svg></div><span>PO</span>
+                  </a></li>
+                <li><a class="flagsturk" href="#">
+                    <div class="svg"><svg class="flags" width="14px" height="14px">
+                        <use xlink:href="img/sprite.svg#turkey"></use>
+                      </svg></div><span>Tü</span>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <h1 class="no-visible">Заголовок страницы для сео</h1>
+      <nav class="main-nav" id="nav"><a class="logo" href="/"><img src="img/logo-mob.svg" alt="Logo" width="67" height="14" /></a>
+        <div class="search">
+          <form class="search__form search__row" action="/search/" method="get"><input class="search__text" type="text" name="q" placeholder="Поиск" /><button class="search__submit"><svg class="icon-search" width="17px" height="17px">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg></button></form><svg class="icon-search" id="icon-search" width="17px" height="17px">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </div><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">WINDOWS</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">MAC OS</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">LINUX</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">•</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">ANDROID</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">iSO</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">•</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">ИГРЫ</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">•</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="listing-article.html">Новости</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Статьи и обзоры</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <div class="mobile-menu__inner"><a class="mobile-menu__back" href="#"> <svg class="soft-menu__icon" width="7px" height="13px">
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg></a>
+          <div class="divider"></div>
+          <div class="mobile-menu__dropdown dropdown">
+            <ul class="mobile-menu__list" id="mobile-menu__list">
+              <li> <a href="#"> <span id="mobile-menu__selected">Приложения</span><svg class="soft-menu__icon" width="7px" height="13px">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg></a></li>
+              <li> <a href="#"> </a><span>Игры</span></li>
+              <li> <a href="#"></a><span>Обзоры</span></li>
+              <li> <a href="#"></a><span>Новости</span></li>
+            </ul>
+          </div>
+          <div class="divider"> </div>
+          <div class="mobile-menu__orderby dropdown"><svg class="soft-menu__icon" width="14px" height="13px">
+              <use xlink:href="img/sprite.svg#mobile-sort"> </use>
+            </svg>
+            <div class="article__orderby orderby" id="orderby"> <span>Сортировать по:</span>
+              <ul>
+                <li> <a href="#">Дате </a></li>
+                <li> <a class="current" href="#">Популярности<svg class="icon-sort" width="12px" height="11px">
+                      <use xlink:href="img/sprite.svg#sort"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="article__inner">
+        <div class="article__row">
+          <div class="article__main">
+            <ul class="breadcrumbs  breadcrumbs--top" aria-label="Breadcrumb" role="navigation">
+              <li class="breadcrumbs__item"><a href="/">Бесплатные программы</a></li>
+              <li class="breadcrumbs__item"><a href="/">Безопасность</a></li>
+              <li class="breadcrumbs__item"><span>Рейтинг антивирусов</span></li>
+            </ul>
+            <h1 class="width-share" id="reiting">Рейтинг бесплатных антивирусов со сравнением
+              <!-- Блок "поделиться в соцсетях"-->
+              <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
+                    <use xlink:href="img/sprite.svg#share"></use>
+                  </svg></a>
+                <ul class="share-panel__list">
+                  <li> <a class="vk" href="#"><svg class="separator" width="21px" height="12px">
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li> <a class="google" href="#"><svg class="separator" width="18px" height="17px">
+                        <use xlink:href="img/sprite.svg#google"> </use>
+                      </svg></a></li>
+                  <li> <a class="facebook" href="#"><svg class="separator" width="11px" height="20px">
+                        <use xlink:href="img/sprite.svg#fb"></use>
+                      </svg></a></li>
+                  <li> <a class="twitter" href="#"><svg class="separator" width="18px" height="17px">
+                        <use xlink:href="img/sprite.svg#twitter"></use>
+                      </svg></a></li>
+                  <li> <a class="share-panel-close" href="#"><svg class="separator" width="23px" height="26px">
+                        <use xlink:href="img/sprite.svg#share"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </h1><!-- контентная часть-->
+            <div class="post">
+              <p>Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux, Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом. Windows Phone на различных языках, в том числе и на русском языке. Все файлы программ от официальных поставщиков, и помимо этого проверены антивирусом.</p>
+              <section class="listing">
+                <div class="post__soft-rating soft-rating">
+                  <div class="soft-rating__sidebar">
+                    <div class="soft-rating__soft-card">
+                      <!--img(src='img/article-2.png', alt='Logo', width='264', height='190')-->
+                    </div><!-- сайтбар оглавление-->
+                    <ul class="sidebar__contents-list contents-list">
+                      <li class="current" data-number="1"> <span>Общий рейтинг</span></li>
+                      <li data-number="2"> <span>Общие сведения</span></li>
+                      <li data-number="3"> <span>Функции и возможности</span></li>
+                      <li data-number="4"><span>Результаты тестов</span></li>
+                    </ul>
+                  </div>
+                  <div class="soft-rating__content">
+                    <div class="splide product-splide" id="soft-slider-rete">
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать </a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-3.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать </a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/programm-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать </a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-3.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать </a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/programm-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
+                          <li class="splide__slide product-slider">
+                            <div class="product-slider__card">
+                              <div class="product-slider__img"> <img src="img/product-2.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                              <div class="product-slider__footer"><a class="btn-circle btn-green-color" href="#"><svg class="download" width="13px" height="15px">
+                                    <use xlink:href="img/sprite.svg#download"></use>
+                                  </svg>Скачать</a></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="contents-list contents-list--mobile">
+                      <li class="current" data-number="1"> <span>Общий рейтинг</span></li>
+                      <li data-number="2"> <span>Общие сведения</span></li>
+                      <li data-number="3"> <span>Функции и возможности</span></li>
+                    </ul>
+                    <div class="soft-rating__progress-bar progress-bar" id="general">
+                      <div class="splide product-splide" id="soft-slider-progress-bar">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1" data-number="1">
+                                <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden" data-number="2">
+                                <div class="progress-bar__diagramm"><span data-progress="10"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden" data-number="3">
+                                <div class="progress-bar__diagramm"><span data-progress="40"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden" data-number="4">
+                                <div class="progress-bar__diagramm"><span data-progress="20"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.8</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="30"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.2</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="60"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.1</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="10"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>0.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="50"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="10"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="90"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.8</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="50"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1" data-number="1">
+                                <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden" data-number="2">
+                                <div class="progress-bar__diagramm"><span data-progress="10"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden" data-number="3">
+                                <div class="progress-bar__diagramm"><span data-progress="40"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden" data-number="4">
+                                <div class="progress-bar__diagramm"><span data-progress="20"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.8</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1" data-number="1">
+                                <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden" data-number="2">
+                                <div class="progress-bar__diagramm"><span data-progress="10"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden" data-number="3">
+                                <div class="progress-bar__diagramm"><span data-progress="40"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden" data-number="4">
+                                <div class="progress-bar__diagramm"><span data-progress="20"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.8</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="30"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.2</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="60"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.1</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="10"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>0.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="50"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="10"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1">
+                                <div class="progress-bar__diagramm"><span data-progress="20"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>3.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="100"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>5.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="90"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.8</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden">
+                                <div class="progress-bar__diagramm"><span data-progress="50"> </span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.5</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="progress-bar__item progress-bar__item-1" data-number="1">
+                                <div class="progress-bar__diagramm"><span data-progress="100"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>4.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-2 hidden" data-number="2">
+                                <div class="progress-bar__diagramm"><span data-progress="10"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.5</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-3 hidden" data-number="3">
+                                <div class="progress-bar__diagramm"><span data-progress="40"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>2.0</span></div>
+                              </div>
+                              <div class="progress-bar__item progress-bar__item-4 hidden" data-number="4">
+                                <div class="progress-bar__diagramm"><span data-progress="20"></span></div>
+                                <div class="progress-bar__description"><svg class="download" width="11px" height="11px">
+                                    <use xlink:href="img/sprite.svg#star"></use>
+                                  </svg><span>1.8</span></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-title">
+                  <div class="tablies__title tablies">Общие сведения</div>
+                  <div class="soft-rating">
+                    <div class="soft-rating__sidebar">
+                      <!-- таблица оглавление-->
+                      <ul class="reting-list reiting_table">
+                        <li> <span>Лицензия</span></li>
+                        <li> <span>Русский язык</span></li>
+                        <li> <span>Поддержка</span></li>
+                      </ul>
+                    </div>
+                    <div class="soft-rating__content">
+                      <div class="splide product-splide soft-slider-table" id="soft-slider-table">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <p>Бесплатная</p>
+                              <p>Бесплатная</p>
+                              <p>Бесплатная</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>Бесплатная</p>
+                              <p>Бесплатная</p>
+                              <p>Бесплатная</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p> <span class="ok"></span></p>
+                              <p> <span class="not-ok"></span></p>
+                              <p> <span class="ok"></span></p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-title">
+                  <div class="tablies__title tablies">Результаты тестов</div>
+                  <div class="soft-rating">
+                    <div class="soft-rating__sidebar">
+                      <!-- таблица оглавление-->
+                      <ul class="reting-list reiting_table">
+                        <li class="big"> <span>Время загрузки системы с антивирусом</span></li>
+                        <li class="big"> <span>Время сканирования системных папок</span></li>
+                        <li class="big"> <span>Использование процессора</span></li>
+                        <li> <span>Использование памяти</span></li>
+                        <li> <span>Рейтинг</span></li>
+                      </ul>
+                    </div>
+                    <div class="soft-rating__content">
+                      <div class="splide product-splide soft-slider-table" id="soft-slider-table-1">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p>
+                                        < 1 мин</p>
+                                          <p>4</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p>2.5%</p>
+                                      <p>
+                                        < 10 мин</p>
+                                          <p>5</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 20%</p>
+                                      <p> 2</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 40 mb</p>
+                                      <p> 3</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 40 mb</p>
+                                      <p> 5</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p>
+                                        < 1 мин</p>
+                                          <p>4</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p>2.5%</p>
+                                      <p>
+                                        < 10 мин</p>
+                                          <p>5</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 20%</p>
+                                      <p> 2</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 40 mb</p>
+                                      <p> 3</p>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <p>
+                                < 1 мин</p>
+                                  <p>
+                                    < 10 мин</p>
+                                      <p> 2.5%</p>
+                                      <p> 40 mb</p>
+                                      <p> 5</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid-title">
+                  <div class="tablies__title tablies">Мнение пользователей</div>
+                  <div class="soft-rating">
+                    <div class="soft-rating__sidebar">
+                      <!-- таблица оглавление-->
+                      <ul class="reting-list reiting_table">
+                        <li> <span>Надежность</span></li>
+                        <li> <span>Скорость работы</span></li>
+                        <li> <span>Общий рейтинг</span></li>
+                      </ul>
+                    </div>
+                    <div class="soft-rating__content">
+                      <div class="splide product-splide soft-slider-table" id="soft-slider-table-2">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                            <li class="splide__slide product-slider">
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                              <div class="compare-block">
+                                <div class="like active"><span>10</span></div>
+                                <div class="dislike"><span>4</span></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 id="function">Нам важно ваше мнение</h3>
+                <p>Каталог бесплатных программ FreeSoft — это старейший в Рунете каталог и файловый архив программ. На страницах нашего портала вы найдете программы для Windows, Android, iOS, Mac OS, Linux</p>
+                <div class="soft-rating">
+                  <div class="splide product-splide" id="soft-slider">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide product-slider">
+                          <div class="product-slider__card">
+                            <div class="product-slider__img"> <img src="img/product-1.png" alt="Logo" width="79" height="79"></div><a class="product-slider__content" href="#">Advanced System Care Ultimate</a>
+                            <div class="product-slider__footer">
+                              <div class="compare-block">
+                                <div class="like like--square"> <span>10</span></div>
+                                <div class="dislike dislike--square"><span>4</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="app">
+                <div class="divider"></div>
+                <div class="app__content">
+                  <div class="post__soft-rating soft-rating">
+                    <div class="soft-rating__sidebar"><img src="img/app.png" alt="Logo" width="140" height="140"></div>
+                    <div class="soft-rating__content">
+                      <h3 class="width-share">Era of Legends Pokémon GO Proffessional
+                        <!-- Блок "поделиться в соцсетях"-->
+                        <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
+                              <use xlink:href="img/sprite.svg#share"></use>
+                            </svg></a>
+                          <ul class="share-panel__list">
+                            <li> <a class="vk" href="#"><svg class="separator" width="21px" height="12px">
+                                  <use xlink:href="img/sprite.svg#vk"></use>
+                                </svg></a></li>
+                            <li> <a class="google" href="#"><svg class="separator" width="18px" height="17px">
+                                  <use xlink:href="img/sprite.svg#google"> </use>
+                                </svg></a></li>
+                            <li> <a class="facebook" href="#"><svg class="separator" width="11px" height="20px">
+                                  <use xlink:href="img/sprite.svg#fb"></use>
+                                </svg></a></li>
+                            <li> <a class="twitter" href="#"><svg class="separator" width="18px" height="17px">
+                                  <use xlink:href="img/sprite.svg#twitter"></use>
+                                </svg></a></li>
+                            <li> <a class="share-panel-close" href="#"><svg class="separator" width="23px" height="26px">
+                                  <use xlink:href="img/sprite.svg#share"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div>
+                      </h3>
+                      <div class="app__meta-info meta-info">
+                        <div class="meta-info">
+                          <div class="meta-info__version"><span>Версия:</span> 7. 12. 19</div>
+                          <div class="meta-info__download"><svg class="separator" width="13px" height="15px">
+                              <use xlink:href="img/sprite.svg#download"> </use>
+                            </svg>
+                            <div>140</div>
+                          </div>
+                          <div class="meta-info__votes"><svg class="separator" width="15px" height="15px">
+                              <use xlink:href="img/sprite.svg#star"> </use>
+                            </svg>
+                            <div>4.0</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="app__buttons"><a class="btn-circle btn-transparent-color" href="#">Версия</a><a class="btn-circle btn-green-color" href="#">Скачать</a>
+                        <div><svg class="separator" width="15px" height="19px">
+                            <use xlink:href="img/sprite.svg#ok-alt"></use>
+                          </svg>Проверено<img src="img/eset.png" alt="Logo" width="41" height="15"></div>
+                      </div>
+                      <div class="app__description">
+                        <p>Версия :<span> 7. 12. 19</span></p>
+                        <p>Совместимость:<span> Windows 7, Windows Vista, Windows 10</span></p>
+                        <p>Стоимость: <span>Бесплатно</span></p>
+                        <p>Язык: <span>Русский, Английский</span></p>
+                        <p>Обновлено: <span>29. 12. 2018 </span></p>
+                        <p>Разработчик: <span> Opera Software</span></p>
+                        <p>Размер: <span>305. 7 МБ</span></p>
+                        <p>Сайт: <span>www.opera.com </span></p>
+                      </div>
+                      <ul class="tags__tag-list">
+                        <li> <a class="btn-transparent--square" href="#"> FreeWare</a></li>
+                        <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                        <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                      </ul>
+                      <p>Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor. С 1995 года — продукт компании Opera Software, образованной авторами первой версии.</p>
+                      <p>Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor.</p><a class="color-main read-more" href="#">Полный обзор</a>
+                      <div class="one-app-slider splide product-splide">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider" style="width: 569px"><img src="img/app1.png" alt="Logo" width="569" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app2.png" alt="Logo" width="174" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app3.png" alt="Logo" width="174" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 569px"><img src="img/app1.png" alt="Logo" width="569" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app2.png" alt="Logo" width="174" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app3.png" alt="Logo" width="174" height="320"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="app">
+                <div class="divider"></div>
+                <div class="app__content">
+                  <div class="post__soft-rating soft-rating">
+                    <div class="soft-rating__sidebar"><img src="img/product-2.png" alt="Logo" width="140" height="140"></div>
+                    <div class="soft-rating__content">
+                      <h3 class="width-share">Era of Legends Pokémon GO Proffessional
+                        <!-- Блок "поделиться в соцсетях"-->
+                        <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
+                              <use xlink:href="img/sprite.svg#share"></use>
+                            </svg></a>
+                          <ul class="share-panel__list">
+                            <li> <a class="vk" href="#"><svg class="separator" width="21px" height="12px">
+                                  <use xlink:href="img/sprite.svg#vk"></use>
+                                </svg></a></li>
+                            <li> <a class="google" href="#"><svg class="separator" width="18px" height="17px">
+                                  <use xlink:href="img/sprite.svg#google"> </use>
+                                </svg></a></li>
+                            <li> <a class="facebook" href="#"><svg class="separator" width="11px" height="20px">
+                                  <use xlink:href="img/sprite.svg#fb"></use>
+                                </svg></a></li>
+                            <li> <a class="twitter" href="#"><svg class="separator" width="18px" height="17px">
+                                  <use xlink:href="img/sprite.svg#twitter"></use>
+                                </svg></a></li>
+                            <li> <a class="share-panel-close" href="#"><svg class="separator" width="23px" height="26px">
+                                  <use xlink:href="img/sprite.svg#share"></use>
+                                </svg></a></li>
+                          </ul>
+                        </div>
+                      </h3>
+                      <div class="app__meta-info meta-info">
+                        <div class="meta-info">
+                          <div class="meta-info__version"><span>Версия:</span> 7. 12. 19</div>
+                          <div class="meta-info__download"><svg class="separator" width="13px" height="15px">
+                              <use xlink:href="img/sprite.svg#download"> </use>
+                            </svg>
+                            <div>140</div>
+                          </div>
+                          <div class="meta-info__votes"><svg class="separator" width="15px" height="15px">
+                              <use xlink:href="img/sprite.svg#star"> </use>
+                            </svg>
+                            <div>4.0</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="app__buttons"><a class="btn-circle btn-transparent-color" href="#">Версия</a><a class="btn-circle btn-green-color" href="#">Скачать</a>
+                        <div><svg class="separator" width="15px" height="19px">
+                            <use xlink:href="img/sprite.svg#ok-alt"></use>
+                          </svg>Проверено<img src="img/eset.png" alt="Logo" width="41" height="15"></div>
+                      </div>
+                      <div class="app__description">
+                        <p>Версия :<span> 7. 12. 19</span></p>
+                        <p>Совместимость:<span> Windows 7, Windows Vista, Windows 10</span></p>
+                        <p>Стоимость: <span>Бесплатно</span></p>
+                        <p>Язык: <span>Русский, Английский</span></p>
+                        <p>Обновлено: <span>29. 12. 2018 </span></p>
+                        <p>Разработчик: <span> Opera Software</span></p>
+                        <p>Размер: <span>305. 7 МБ</span></p>
+                        <p>Сайт: <span>www.opera.com </span></p>
+                      </div>
+                      <ul class="tags__tag-list">
+                        <li> <a class="btn-transparent--square" href="#"> FreeWare</a></li>
+                        <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                        <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                      </ul>
+                      <p>Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor. С 1995 года — продукт компании Opera Software, образованной авторами первой версии.</p>
+                      <p>Веб-браузер и пакет прикладных программ для работы в Интернете, выпускаемый компанией Opera Software. Разработан в 1994 году группой исследователей из норвежской компании Telenor.</p><a class="color-main read-more" href="#">Полный обзор</a>
+                      <div class="one-app-slider-1 one-app-slider--last splide product-splide">
+                        <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide product-slider" style="width: 569px"><img src="img/app1.png" alt="Logo" width="569" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app2.png" alt="Logo" width="174" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app3.png" alt="Logo" width="174" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 569px"><img src="img/app1.png" alt="Logo" width="569" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app2.png" alt="Logo" width="174" height="320"></li>
+                            <li class="splide__slide product-slider" style="width: 174px"><img src="img/app3.png" alt="Logo" width="174" height="320"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+              </section><!--  футер для страницы программы-->
+              <div class="post__footer post-app__footer">
+                <div class="post__footer-header">
+                  <div class="post__footer-vote"><svg class="separator" width="11px" height="11px">
+                      <use xlink:href="img/sprite.svg#star"></use>
+                    </svg>
+                    <div class="post__footer-count">5.0<span>1 560 оценок</span></div>
+                  </div>
+                  <div class="post__footer-stars">
+                    <div class="post__footer-ratings">
+                      <div class="star"> </div>
+                      <div class="star"></div>
+                      <div class="star"> </div>
+                      <div class="star"></div>
+                      <div class="star"></div>
+                    </div>
+                  </div><span>Оцените программу </span>
+                  <div class="share-panel"> <a class="share-panel-open" href="#"><svg class="separator" width="23px" height="26px">
+                        <use xlink:href="img/sprite.svg#share"></use>
+                      </svg></a>
+                    <ul class="share-panel__list">
+                      <li> <a class="vk" href="#"><svg class="separator" width="21px" height="12px">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                          </svg></a></li>
+                      <li> <a class="google" href="#"><svg class="separator" width="18px" height="17px">
+                            <use xlink:href="img/sprite.svg#google"> </use>
+                          </svg></a></li>
+                      <li> <a class="facebook" href="#"><svg class="separator" width="11px" height="20px">
+                            <use xlink:href="img/sprite.svg#fb"></use>
+                          </svg></a></li>
+                      <li> <a class="twitter" href="#"><svg class="separator" width="18px" height="17px">
+                            <use xlink:href="img/sprite.svg#twitter"></use>
+                          </svg></a></li>
+                      <li> <a class="share-panel-close" href="#"><svg class="separator" width="23px" height="26px">
+                            <use xlink:href="img/sprite.svg#share"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="post-footer-center">
+                  <div class="tags">
+                    <ul class="tags__tag-list">
+                      <li> <a class="btn-transparent--square" href="#"> FreeWare</a></li>
+                      <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                      <li> <a class="btn-transparent--square" href="#"> МУЛЬТИМЕДИА</a></li>
+                      <li> <a class="btn-transparent--square" href="#"> Эффективная работа</a></li>
+                      <li> </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="post__footer-bottom"></div>
+              </div><!-- блок комментариев в контенте-->
+              <div class="post__block-comments">
+                <div>56 комментариев</div><a class="btn-circle btn-main-color">Читать</a>
+              </div><!-- навигация по статьям-->
+              <div class="post__block-nav">
+                <p>следующая статья</p><a href="#"> Как установить программу на Windows 10</a><svg width="7px" height="13px">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <div class="page-footer__row">
+            <div class="page-footer__col-1">
+              <div class="page-footer__menu-title">Участиe</div>
+              <ul class="page-footer__menu">
+                <li> <a href="#">Добавить программу</a></li>
+                <li> <a href="#">Добавить обзор или статью</a></li>
+                <li> <a href="#">Форум</a></li>
+              </ul>
+              <div class="page-footer__sotials">
+                <ul class="page-footer__sotial-list">
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="21px" height="12px">
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="10px" height="20px">
+                        <use xlink:href="img/sprite.svg#ya"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="11px" height="20px">
+                        <use xlink:href="img/sprite.svg#fb"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="18px" height="17px">
+                        <use xlink:href="img/sprite.svg#google"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="21px" height="18px">
+                        <use xlink:href="img/sprite.svg#telegramm"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="24px" height="18px">
+                        <use xlink:href="img/sprite.svg#youtube"> </use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col-2">
+              <div class="page-footer__menu-title">Информация</div>
+              <ul class="page-footer__menu">
+                <li> <a href="#">Для авторов программ</a></li>
+                <li> <a href="#">Контакты</a></li>
+                <li> <a href="#">Реклама </a></li>
+              </ul>
+            </div>
+            <div class="page-footer__col-3">
+              <div class="page-footer__menu-title">Информация</div>
+              <form class="page-footer__subscribe"><input type="mail" placeholder="thomandersen1@gmail.com" /><button class="subscribe__submit"><svg class="icon-search" width="20px" height="13px">
+                    <use xlink:href="img/sprite.svg#arrowbig"></use>
+                  </svg></button></form>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="page-footer__copyright">
+            <div> <a href="#"> DMCA Policy</a><a href="#"> Условия и правила </a></div>
+            <div>© 1998-2017 freeSOFT ®</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="to-top to-top-wrap"><svg class="progress-circle svg-content" width="60" height="60" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 62.5653;"></path>
+      </svg></div>
+  </div>
+  <script src="js/bundle.js"></script>
+
+</body>
+
+</html>
