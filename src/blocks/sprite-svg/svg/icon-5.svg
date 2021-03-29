@@ -1,0 +1,22 @@
+<svg width="108" height="105" viewBox="0 0 108 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="63" y="47" width="44" height="57" rx="3" stroke="white" stroke-width="2"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 72 74)" fill="white"/>
+<mask id="path-3-inside-1" fill="white">
+<rect width="27" height="11" rx="1" transform="matrix(1 0 0 -1 72 63)"/>
+</mask>
+<rect width="27" height="11" rx="1" transform="matrix(1 0 0 -1 72 63)" stroke="white" stroke-width="4" mask="url(#path-3-inside-1)"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 72 86)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 72 98)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 83 74)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 83 86)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 83 98)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 94 74)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 94 86)" fill="white"/>
+<rect width="5" height="6" rx="1" transform="matrix(1 0 0 -1 94 98)" fill="white"/>
+<path d="M1 16.5L18.5 1H72V46M1 16.5H18.5V2.5M1 16.5V33M72 104H1V86.75M1 33H10M1 33V51M1 51H10M1 51V69.5M1 69.5H10M1 69.5V86.75M1 86.75H10" stroke="white" stroke-width="2"/>
+<mask id="path-13-inside-2" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33 8C31.3431 8 30 9.34314 30 11V78H45V11C45 9.34315 43.6569 8 42 8H33ZM45 79H30L34.9355 95.349C35.8099 98.2452 39.9354 98.1731 40.708 95.2481L45 79Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M33 8C31.3431 8 30 9.34314 30 11V78H45V11C45 9.34315 43.6569 8 42 8H33ZM45 79H30L34.9355 95.349C35.8099 98.2452 39.9354 98.1731 40.708 95.2481L45 79Z" fill="white"/>
+<path d="M30 78H28V80H30V78ZM45 78V80H47V78H45ZM45 79L46.9337 79.5108L47.5969 77H45V79ZM30 79V77H27.3071L28.0853 79.578L30 79ZM34.9355 95.349L33.0209 95.927H33.0209L34.9355 95.349ZM40.708 95.2481L38.7744 94.7374L40.708 95.2481ZM32 11C32 10.4477 32.4477 10 33 10V6C30.2386 6 28 8.23857 28 11H32ZM32 78V11H28V78H32ZM30 80H45V76H30V80ZM43 11V78H47V11H43ZM42 10C42.5523 10 43 10.4477 43 11H47C47 8.23858 44.7614 6 42 6V10ZM33 10H42V6H33V10ZM45 77H30V81H45V77ZM36.8502 94.771L31.9147 78.422L28.0853 79.578L33.0209 95.927L36.8502 94.771ZM38.7744 94.7374C38.5168 95.7124 37.1416 95.7364 36.8502 94.771L33.0209 95.927C34.4781 100.754 41.354 100.634 42.6417 95.7589L38.7744 94.7374ZM43.0663 78.4892L38.7744 94.7374L42.6417 95.7589L46.9337 79.5108L43.0663 78.4892Z" fill="white" mask="url(#path-13-inside-2)"/>
+</svg>
