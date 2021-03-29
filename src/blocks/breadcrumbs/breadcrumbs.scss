@@ -8,10 +8,17 @@
   margin-bottom: $typo-margin-vertical;
   padding: 0;
   color: $text-color;
+  font-weight: normal;
+font-size: 14px;
+line-height: 19px;
+color: $gray-light;
+font-weight: 300;
 
   a {
     color: $text-color;
     text-decoration: none;
+    font-weight: 400;
+    
 
     &:hover,
     &:focus {
@@ -26,7 +33,7 @@
     white-space: nowrap;
 
     &:not(:last-child):after {
-      content: '>';
+      content: '/';
       display: inline-block;
       margin-left: 0.8em;
       color: $gray;

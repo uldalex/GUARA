@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.search {
+
+  $block-name:                &; // #{$block-name}__element
+  flex-grow: 2;
+  margin:0 60px;
+  position: relative;
+
+  & input {
+    
+    &:active, &:focus {
+      outline: none;
+    }
+  }
+  
+  & input.search__text {
+    width:100%;
+    height:40px;
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 8px 24px;
+   
+    &:active, &:focus {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.14);
+    }
+  }
+  & .icon-search {
+    display: none;
+  }
+  & .search__submit {
+    
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    background-color: transparent;
+    border:0px;
+   
+    
+      & .icon-search {
+      display: block;
+      fill:#FD6F29; 
+      transition: all 0.3s linear;
+    }
+    &:hover {
+      cursor: pointer;
+      & .icon-search {
+        fill:$gray-darkest;
+      }
+
+    }
+  }
+  @media (max-width:768px){
+    margin: 4px 0;
+    & .icon-search {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 14px;
+        fill:#ffffff; 
+      }
+    & .search__form{
+      display: none;
+      position: relative;
+      z-index: 2;
+
+      &.open {
+        display: block;
+      }
+      & .icon-search {
+        top:2px;
+      }
+    }
+    
+   }
+
+  }
+

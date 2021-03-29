@@ -2,4 +2,21 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.page-header {}
+.page-header {
+  background-color: transparent;
+  position:relative;
+  z-index: 100;
+
+  &__inner {
+    @include container();
+    height: 100%;
+  }
+
+  &__row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}

@@ -19,4 +19,64 @@ mixin page-footer(mods)
 
   footer.page-footer(class=allMods, role='contentinfo')&attributes(attributes)
     .page-footer__inner
+      .page-footer__row 
+        .page-footer__col-1
+         .page-footer__menu-title Участиe
+         ul.page-footer__menu
+          li 
+            a(href="#") Добавить программу
+          li 
+            a(href="#") Добавить обзор или статью
+          li 
+            a(href="#") Форум
+         .page-footer__sotials
+            ul.page-footer__sotial-list 
+                li.page-footer__sotial-item 
+                  a.footer-sotial-link(href="#")
+                    svg.sotial(width="21px" height="12px")
+                              use(xlink:href="img/sprite.svg#vk")
+                li.page-footer__sotial-item 
+                  a.footer-sotial-link(href="#")
+                    svg.sotial(width="10px" height="20px")
+                              use(xlink:href="img/sprite.svg#ya")
+                li.page-footer__sotial-item 
+                  a.footer-sotial-link(href="#")
+                    svg.sotial(width="11px" height="20px")
+                              use(xlink:href="img/sprite.svg#fb")
+                li.page-footer__sotial-item 
+                  a.footer-sotial-link(href="#")
+                    svg.sotial(width="18px" height="17px")
+                              use(xlink:href="img/sprite.svg#google")
+                li.page-footer__sotial-item 
+                  a.footer-sotial-link(href="#")
+                    svg.sotial(width="21px" height="18px")
+                              use(xlink:href="img/sprite.svg#telegramm")
+                li.page-footer__sotial-item 
+                  a.footer-sotial-link(href="#")
+                    svg.sotial(width="24px" height="18px")
+                              use(xlink:href="img/sprite.svg#youtube")  
+              
+        .page-footer__col-2
+          .page-footer__menu-title Информация
+          ul.page-footer__menu
+             li 
+               a(href="#") Для авторов программ
+             li 
+               a(href="#") Контакты
+             li 
+               a(href="#") Реклама 
+        .page-footer__col-3
+          .page-footer__menu-title Информация
+          form.page-footer__subscribe
+           input(type="mail", placeholder="thomandersen1@gmail.com")
+           button.subscribe__submit
+            svg(class="icon-search" width="20px" height="13px")
+              use(xlink:href="img/sprite.svg#arrowbig")
+      .divider
+      .page-footer__copyright
+        div 
+          a(href="#")  DMCA Policy
+          a(href="#")  Условия и правила 
+        div © 1998-2017 freeSOFT ®
+
       block

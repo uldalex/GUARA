@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (login)
+
+mixin login(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +login('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' login--' + modsList[i].trim();
+      }
+    }
+
+  .login(class=allMods)&attributes(attributes)
+    a.login__in(href="#") Вход
+    span |
+    a.login__regisrer(href="#") Регистрация

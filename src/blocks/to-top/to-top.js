@@ -1,56 +1,41 @@
 /* global document window performance requestAnimationFrame */
 
 const ready = require('../../js/utils/documentReady.js');
-
+const $ = require('jquery');
 ready(function(){
 
-  if(document.getElementById('to-top')) {
-
-    document.getElementById('to-top').addEventListener('click', function(e) {
-      e.preventDefault();
-      var scroll = window.pageYOffset;
-      var targetTop = 0;
-      var scrollDiff = (scroll - targetTop) * -1;
-      animate({
-        duration: 500,
-        timing: function(timeFraction) {
-          return Math.pow(timeFraction, 4); // https://learn.javascript.ru/js-animation
-        },
-        draw: function(progress) {
-          var scrollNow = scroll + progress * scrollDiff;
-          window.scrollTo(0,scrollNow);
-        }
-      });
-    }, false);
-
-    window.addEventListener('scroll', visibilityToggle);
-    visibilityToggle();
-
+  var progressPath = document.querySelector('.to-top-wrap path');
+  var pathLength = progressPath.getTotalLength();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+  progressPath.getBoundingClientRect();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+  var updateProgress = function () {
+    var scroll = $(window).scrollTop();
+    var height = $(document).height() - $(window).height();
+    var progress = pathLength - (scroll * pathLength / height);
+    progressPath.style.strokeDashoffset = progress;
   }
-
-  function visibilityToggle() {
-    if(window.pageYOffset >= 500) {
-      document.getElementById('to-top').classList.add('to-top--visible');
+  updateProgress();
+  $(window).scroll(updateProgress);	
+  var offset = 50;
+  var duration = 550;
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > offset) {
+      $('.to-top-wrap').addClass('active-progress');
+    } else {
+      $('.to-top-wrap').removeClass('active-progress');
     }
-    else {
-      document.getElementById('to-top').classList.remove('to-top--visible');
-    }
-  }
-
-  function animate(_ref) {
-    var timing = _ref.timing,
-        draw = _ref.draw,
-        duration = _ref.duration;
-    var start = performance.now();
-    requestAnimationFrame(function animate(time) {
-      var timeFraction = (time - start) / duration;
-      if (timeFraction > 1) timeFraction = 1;
-      var progress = timing(timeFraction);
-      draw(progress);
-      if (timeFraction < 1) {
-        requestAnimationFrame(animate);
-      }
-    });
-  }
-
+  });				
+  $('.to-top-wrap').on('click', function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop: 0}, duration);
+    return false;
+  })
+  
+  
 });
+
+
+

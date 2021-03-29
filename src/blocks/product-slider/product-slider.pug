@@ -1,0 +1,187 @@
+//- Все примеси в этом файле должны начинаться c имени блока (product-slider)
+
+mixin product-slider(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +product-slider('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + modsList[i].trim();
+      }
+    }
+
+  section.product-slider&attributes(attributes)
+    .product-slider__inner
+      h3
+        a.has-separator(href="#")= text
+          svg.separator(width="7px" height="13px")
+            use(xlink:href="img/sprite.svg#arrow")
+
+      .splide.product-splide(id=allMods)
+              .splide__track
+                ul.splide__list
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать 
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-3.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-2.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-3.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать
+                  li.splide__slide.product-slider
+                    .product-slider__card
+                      .product-slider__img 
+                        img(src='img/product-1.png', alt='Logo', width='79', height='79')
+                      .product-slider__buttons 
+                        a.btn-transparent--circle(href="#") Windows
+                        a.btn-transparent--circle(href="#")
+                          span.rate-star
+                            svg.soft-menu__icon(width="11px" height="11px")
+                                use(xlink:href="img/sprite.svg#star") 
+                          span.rate-value 4.5
+                      a(href="#").product-slider__content Titanium Maximum Security
+                      .product-slider__bottom 
+                          .product-slider__version Версия 11. 05. 17
+                          .product-slider__size (305.7 МБ)
+                      
+                      .product-slider__footer
+                        .divider 
+                        a(href="#")
+                          svg.download(width="13px" height="15px")
+                              use(xlink:href="img/sprite.svg#download")
+                          | Скачать
+
+
+

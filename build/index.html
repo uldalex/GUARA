@@ -9,8 +9,6 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
   <meta content="notranslate" name="google">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>Главная</title>
   <meta name="description" content="">
   <link rel="stylesheet" href="css/style.css">
@@ -32,16 +30,189 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 <body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
   <div class="page__inner">
     <div class="page__content">
-      <header class="page-header" role="banner">
-        <div class="page-header__inner"></div>
-      </header>
-      <h1 class="no-visible">Заголовок страницы для сео</h1>
+      <div class="top-block">
+        <header class="page-header" role="banner">
+          <div class="page-header__inner">
+            <div class="page-header__row"><a class="logo" href="/"><img class="logo" src="img/logo.svg" alt="Logo" width="165" height="74" /></a>
+              <nav class="main-nav" id="nav"><button class="burger main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
+                <ul class="main-nav__list">
+                  <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="#about">О нас</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#advantage">Преимущества</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Бренды</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Расчет стоимости</a></li>
+                </ul>
+              </nav><a class="header__phone" href="tel:+78085550111">8 (808) 555-0111</a>
+            </div>
+          </div>
+        </header><img class="parallax" src="img/list.png" alt="Logo" width="100%" height="100%">
+        <div class="top-block__inner">
+          <div class="top-block__row"> <img class="col-1" src="img/holod.png" alt="image">
+            <div class="col-2">
+              <h1>guara <span>Бесплатный сервис по подбору холодильного оборудования от проверенных поставщиков</span></h1>
+              <ul class="no-list-style">
+                <li>Доставляем по России и СНГ</li>
+                <li>Монтируем на объекте</li>
+                <li>Запускаем в работу</li>
+                <li>Предоставляем гарантию </li>
+              </ul>
+              <ul class="list-circle">
+                <li>Найдём оборудование любой сложности</li>
+                <li>Подготовим пакет документов для осуществления сделки</li>
+                <li>Обезопасим Ваш выбор от мошенников</li>
+              </ul><a class="btn" href="#zakaz" data-toggle="modal" data-target="#zakaz">Подобрать оборудование</a>
+            </div>
+          </div>
+        </div>
+        <div id="about"></div>
+      </div>
+      <section class="about">
+        <div class="about__inner">
+          <h3>Сфера деятельности<div class="subtitle">Основные направления работы</div>
+          </h3>
+          <ul class="about__list">
+            <li class="about-list__item"> <img class="product-img" src="img/product-1.png" alt="Скороморозильные агрегаты" width="171" height="170">
+              <div class="product-title">Скороморозильные агрегаты</div>
+            </li>
+            <li class="about-list__item"> <img class="product-img" src="img/product-2.png" alt="Шоковая заморозка" width="171" height="170">
+              <div class="product-title">Шоковая заморозка</div>
+            </li>
+            <li class="about-list__item"> <img class="product-img" src="img/product-3.png" alt="Воздухоохладители" width="212" height="125">
+              <div class="product-title">Воздухоохладители</div>
+            </li>
+            <li class="about-list__item"> <img class="product-img" src="img/product-4.png" alt="Холодильные централи" width="170" height="124">
+              <div class="product-title">Холодильные централи</div>
+            </li>
+            <li class="about-list__item"> <img class="product-img" src="img/product-5.png" alt="Холодильные камеры" width="170" height="170">
+              <div class="product-title">Холодильные камеры</div>
+            </li>
+            <li class="about-list__item"> <img class="product-img" src="img/product-6.png" alt="Чиллеры" width="170" height="162">
+              <div class="product-title">Чиллеры</div>
+            </li>
+            <li class="about-list__item"> <img class="product-img" src="img/product-7.png" alt="Климатические камеры" width="171" height="170">
+              <div class="product-title">Климатические камеры</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="feedback__inner">
+          <div class="feedback__row">
+            <div class="col-1">
+              <h3>Требуется нетиповое и нестандартное холодильное оборудование?</h3>
+              <div class="subtitle">Просто оставьте заявку и получите подробную <br> консультацию по подбору через 5 минут.</div>
+            </div>
+            <div class="col-2">
+              <form action="post"><input type="tel"><input class="btn" type="submit" value="Свяжитесь со мной"></form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantage">
+        <div id="advantage"></div>
+        <div class="advantage__inner">
+          <h3>Наш сервис поможет не<br> только купить, но и ПРОДАТЬ!</h3>
+          <div class="advantage__list">
+            <li>
+              <div class="advantage__number">01</div>
+              <div class="advantage__content">Обширная база<br> покупателей</div>
+            </li>
+            <li>
+              <div class="advantage__number">02</div>
+              <div class="advantage__content">Принятие любых<br> нестандартных вариантов</div>
+            </li>
+            <li>
+              <div class="advantage__number">03</div>
+              <div class="advantage__content">Выкуп с <br> демонтажными <br>работами</div>
+            </li>
+            <li>
+              <div class="advantage__number">04</div>
+              <div class="advantage__content">Оценка стоимости<br>по фото</div>
+            </li>
+          </div><a class="btn" href="#zakaz" data-toggle="modal" data-target="#zakaz">Узнать подробности</a>
+          <h3>Преимущества сервиса GUARA</h3>
+        </div>
+      </section>
     </div>
     <div class="page__footer-wrapper">
       <footer class="page-footer" role="contentinfo">
-        <div class="page-footer__inner"></div>
+        <div class="page-footer__inner">
+          <div class="page-footer__row">
+            <div class="page-footer__col-1">
+              <div class="page-footer__menu-title">Участиe</div>
+              <ul class="page-footer__menu">
+                <li> <a href="#">Добавить программу</a></li>
+                <li> <a href="#">Добавить обзор или статью</a></li>
+                <li> <a href="#">Форум</a></li>
+              </ul>
+              <div class="page-footer__sotials">
+                <ul class="page-footer__sotial-list">
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="21px" height="12px">
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="10px" height="20px">
+                        <use xlink:href="img/sprite.svg#ya"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="11px" height="20px">
+                        <use xlink:href="img/sprite.svg#fb"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="18px" height="17px">
+                        <use xlink:href="img/sprite.svg#google"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="21px" height="18px">
+                        <use xlink:href="img/sprite.svg#telegramm"></use>
+                      </svg></a></li>
+                  <li class="page-footer__sotial-item"> <a class="footer-sotial-link" href="#"><svg class="sotial" width="24px" height="18px">
+                        <use xlink:href="img/sprite.svg#youtube"> </use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="page-footer__col-2">
+              <div class="page-footer__menu-title">Информация</div>
+              <ul class="page-footer__menu">
+                <li> <a href="#">Для авторов программ</a></li>
+                <li> <a href="#">Контакты</a></li>
+                <li> <a href="#">Реклама </a></li>
+              </ul>
+            </div>
+            <div class="page-footer__col-3">
+              <div class="page-footer__menu-title">Информация</div>
+              <form class="page-footer__subscribe"><input type="mail" placeholder="thomandersen1@gmail.com" /><button class="subscribe__submit"><svg class="icon-search" width="20px" height="13px">
+                    <use xlink:href="img/sprite.svg#arrowbig"></use>
+                  </svg></button></form>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="page-footer__copyright">
+            <div> <a href="#"> DMCA Policy</a><a href="#"> Условия и правила </a></div>
+            <div>© 1998-2017 freeSOFT ®</div>
+          </div>
+        </div>
       </footer>
-    </div><a class="to-top" id="to-top" href="#">↑</a>
+    </div>
+    <div class="to-top to-top-wrap"><svg class="progress-circle svg-content" width="60" height="60" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 62.5653;"></path>
+      </svg></div>
+    <div class="modal" id="zakaz" tabindex="-1" role="dialog">
+      <div class="modal__dialog" role="document">
+        <div class="modal__content">
+          <div class="modal__header"><span class="close modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+            <h4 class="modal__title">Заказать звонок</h4>
+          </div>
+          <div class="modal__body">
+            <form class="modal__form" id="feedback_form">
+              <div class="form-control"><label for="lastname">Фамилия</label><input class="require" id="lastname" required="required" name="lastname" type="text" autocomplete="off"></div>
+              <div class="form-control"><label for="name">Имя</label><input class="require" id="name" required="required" name="name" type="text" autocomplete="off"></div>
+              <div class="form-control"><label for="phone">Телефон с кодом страны и города</label><input class="require" id="phone" required="required" name="phone" type="text" autocomplete="off"></div>
+              <div class="form-radio"><input class="require" id="property" required="required" name="property" type="radio" autocomplete="off"><label for="property">Физическое лицо</label><input class="require" id="company" required="required" name="property" type="radio" autocomplete="off"><label for="company">Юридическое лицо</label></div>
+              <div class="form-control"></div><label for="message">Суть вашего вопроса<textarea id="message" name="message" required="required"> </textarea></label>
+              <div class="form-control"><input class="button" type="submit" value="Заказать звонок"></div>
+              <div class="form-agreement"><input class="required" id="agreement" type="checkbox" required="required" name="agreement" checked="checked"><label for="agreement">«Настоящим соглашаюсь на обработку ООО «Пепеляев Групп» моих персональных данных, указанных в заполненной мной форме на сайте <a href="www.pgplaw.ru">www.pgplaw.ru</a> в целях установления со мной контакта» </label></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/bundle.js"></script>
 

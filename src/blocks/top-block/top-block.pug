@@ -1,0 +1,169 @@
+//- Все примеси в этом файле должны начинаться c имени блока (top-block)
+
+mixin top-block(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +top-block('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' top-block--' + modsList[i].trim();
+      }
+    }
+
+  .top-block(class=allMods)&attributes(attributes)
+      .top-block__row 
+        .top-block__col-8
+          img(src='img/index-top-block.jpg', alt='Top', width='', height='')
+          
+          .top-block__buttons-block
+            a.btn-big--square(href="#") обзоры
+            a.btn-big--square(href="#") Статьи
+            a.btn-big--square(href="#") Видео
+        .top-block__col-3
+          .top-block__content
+            .top-block__title Хочешь писать статьи?
+            .top-block__text Приглашаем в команду :)
+            a.btn-big--circle(href="#") Стать автором
+        .top-block__inner
+          .top-block__title-block Приложения и Игры
+          .top-block__col-4
+            .top-block__news
+              .top-block__title.color-main.has-separator Новости 
+                svg.separator(width="7px" height="13px")
+                  use(xlink:href="img/sprite.svg#arrow")
+              .divider 
+              .top-block__news-card.news-card
+                .news-card__link 
+                  a(href="#") Skype обзавелся функцией шифрования сообщений
+                .news-card__date 12 ноября 2018
+              .divider 
+              .top-block__news-card.news-card
+                .news-card__link 
+                  a(href="#") Skype обзавелся функцией шифрования сообщений
+                .news-card__date 12 ноября 2018
+              .divider 
+              .top-block__news-card.news-card
+                .news-card__link
+                  a(href="#") Skype обзавелся функцией шифрования сообщений
+                .news-card__date 12 ноября 2018
+              .divider 
+              .top-block__news-card.news-card
+                .news-card__link
+                  a(href="#") Skype обзавелся функцией шифрования сообщений
+                .news-card__date 12 ноября 2018
+          .top-block__col-5
+            .top-block__soft-card.soft-card
+              a.soft-card__link(href="#") 
+                .soft-card__title Приложения
+                .soft-card__content 96 статей, 8 обзоров, 6 000 просмотров
+                .soft-card__arrow
+                   svg.separator(width="7px" height="13px")
+                      use(xlink:href="img/sprite.svg#arrow")
+            .top-block__soft-card.soft-card
+              a.soft-card__link(href="#") 
+                .soft-card__title Видео
+                .soft-card__content 96 статей, 8 обзоров, 6 000 просмотров
+                .soft-card__arrow
+                   svg.separator(width="7px" height="13px")
+                      use(xlink:href="img/sprite.svg#arrow")
+            .top-block__soft-card.soft-card
+              a.soft-card__link(href="#") 
+                .soft-card__title Mac
+                .soft-card__content 96 статей, 8 обзоров, 6 000 просмотров
+                .soft-card__arrow
+                   svg.separator(width="7px" height="13px")
+                      use(xlink:href="img/sprite.svg#arrow")
+            .top-block__soft-card.soft-card
+              a.soft-card__link(href="#") 
+                .soft-card__title Расширения
+                .soft-card__content 96 статей, 8 обзоров, 6 000 просмотров
+                .soft-card__arrow
+                   svg.separator(width="7px" height="13px")
+                      use(xlink:href="img/sprite.svg#arrow")
+          .top-block__col-6
+            ul.top-block__soft-menu 
+              li.soft-menu__item
+                a(href="#")
+                  svg.soft-menu__icon(width="26px" height="30px")
+                    use(xlink:href="img/sprite.svg#android")
+              li.soft-menu__item
+                a(href="#")
+                  svg.soft-menu__icon(width="22px" height="27px")
+                    use(xlink:href="img/sprite.svg#apple") 
+              li.soft-menu__item
+                a(href="#")
+                  svg.soft-menu__icon(width="31px" height="36px")
+                    use(xlink:href="img/sprite.svg#linux")
+              li.soft-menu__item
+                a(href="#")
+                  svg.soft-menu__icon(width="22px" height="22px")
+                    use(xlink:href="img/sprite.svg#windows")
+          .top-block__col-7
+            a(href="#").top-block__title.has-separator Актуальные статьи 
+              svg.color-main.separator(width="7px" height="13px")
+                  use(xlink:href="img/sprite.svg#arrow")
+            #actual-article.splide
+              .splide__track
+                ul.splide__list
+                  li.splide__slide.actual-article
+                    .actual-article__card
+                      a(href="#").actual-article__content Как установить Avast на Windows 10
+                      .actual-article__footer 
+                         .actual-article__date 28 сентября 2018
+                         .actual-article__vue
+                          svg.soft-menu__icon(width="17px" height="10px")
+                            use(xlink:href="img/sprite.svg#eye")
+                          span 4 589
+                  li.splide__slide.actual-article
+                    .actual-article__card
+                      a(href="#").actual-article__content Как установить Avast на Windows 10
+                      .actual-article__footer 
+                         .actual-article__date 28 сентября 2018
+                         .actual-article__vue
+                          svg.soft-menu__icon(width="17px" height="10px")
+                            use(xlink:href="img/sprite.svg#eye")
+                          span 4 589 
+                  li.splide__slide.actual-article
+                    .actual-article__card
+                      a(href="#").actual-article__content Как установить Avast на Windows 10
+                      .actual-article__footer 
+                         .actual-article__date 28 сентября 2018
+                         .actual-article__vue
+                          svg.soft-menu__icon(width="17px" height="10px")
+                            use(xlink:href="img/sprite.svg#eye")
+                          span 4 589 
+                  li.splide__slide.actual-article
+                    .actual-article__card
+                      a(href="#").actual-article__content Как установить Avast на Windows 10
+                      .actual-article__footer 
+                         .actual-article__date 28 сентября 2018
+                         .actual-article__vue
+                          svg.soft-menu__icon(width="17px" height="10px")
+                            use(xlink:href="img/sprite.svg#eye")
+                          span 4 589 
+                  li.splide__slide.actual-article
+                    .actual-article__card
+                      a(href="#").actual-article__content Как установить Avast на Windows 10
+                      .actual-article__footer 
+                         .actual-article__date 28 сентября 2018
+                         .actual-article__vue
+                          svg.soft-menu__icon(width="17px" height="10px")
+                            use(xlink:href="img/sprite.svg#eye")
+                          span 4 589 
+                  li.splide__slide.actual-article
+                    .actual-article__card
+                      a(href="#").actual-article__content Как установить Avast на Windows 10
+                      .actual-article__footer 
+                         .actual-article__date 28 сентября 2018
+                         .actual-article__vue
+                          svg.soft-menu__icon(width="17px" height="10px")
+                            use(xlink:href="img/sprite.svg#eye")
+                          span 4 589 

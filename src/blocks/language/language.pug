@@ -1,0 +1,75 @@
+//- Все примеси в этом файле должны начинаться c имени блока (language)
+
+mixin language(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +language('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' language--' + modsList[i].trim();
+      }
+    }
+
+  .language(class=allMods)&attributes(attributes)
+      a#header-menu__language.header-menu__link.header-menu__language(href="#")
+        <span> RU </span>
+        .svg 
+          svg(class="flags" width="14px" height="14px")
+            use(xlink:href="img/sprite.svg#russia")
+      ul#language-list.header-menu__language-list
+        li
+          a.flagsen(href="#") 
+            .svg
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#en")
+            span EN
+        li
+          a.flagscn(href="#")
+            .svg
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#china")
+            span 中文
+        li
+          a.flagsde(href="#")
+            .svg
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#ge")
+            span DE
+        li
+          a.flagsit(href="#")
+            .svg
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#italy")
+            span IT
+        li
+          a.flagsesp(href="#")
+            .svg
+              svg(class="flags" width="18px" height="18px")
+                use(xlink:href="img/sprite.svg#spain")
+            span ES
+        li
+          a.flagsesp(href="#")
+            .svg
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#france")
+            span FR
+        li
+          a.flagsport(href="#") 
+            .svg 
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#portugal")
+            span PO
+        li
+          a.flagsturk(href="#")
+            .svg
+              svg(class="flags" width="14px" height="14px")
+                use(xlink:href="img/sprite.svg#turkey")
+            span Tü

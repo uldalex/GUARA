@@ -1,0 +1,59 @@
+//- Все примеси в этом файле должны начинаться c имени блока (mobile-menu)
+
+mixin mobile-menu(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +mobile-menu('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' mobile-menu--' + modsList[i].trim();
+      }
+    }
+
+  .mobile-menu(class=allMods)&attributes(attributes)
+    .mobile-menu__inner
+      a.mobile-menu__back(href="#") 
+        svg.soft-menu__icon(width="7px" height="13px")
+          use(xlink:href="img/sprite.svg#arrow")
+      .divider
+      .mobile-menu__dropdown.dropdown 
+          ul#mobile-menu__list.mobile-menu__list 
+            li 
+              a(href="#") 
+                span#mobile-menu__selected Приложения
+                svg.soft-menu__icon(width="7px" height="13px")
+                  use(xlink:href="img/sprite.svg#arrow")
+            li 
+              a(href="#") 
+              span Игры
+            li 
+              a(href="#")
+              span Обзоры
+            li 
+              a(href="#")
+              span Новости
+
+      .divider 
+      .mobile-menu__orderby.dropdown
+        svg.soft-menu__icon(width="14px" height="13px")
+          use(xlink:href="img/sprite.svg#mobile-sort") 
+        #orderby.article__orderby.orderby 
+                    span Сортировать по:
+                    ul 
+                        li 
+                          a(href="#") Дате 
+                        li 
+                          a.current(href="#") Популярности
+                            svg(class="icon-sort" width="12px" height="11px")
+                                use(xlink:href="img/sprite.svg#sort")
+
+
+      

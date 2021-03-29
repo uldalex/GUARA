@@ -2,4 +2,201 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.page-footer {}
+.page-footer {
+    background-color: $gray-darkest ;
+    padding:60px 0;
+    color:$white;
+
+    &__inner {
+        @include container();
+    }
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__col-1 {
+        width: 300px;
+    }
+    &__col-2 {
+        width: 300px;
+    }
+    &__col-3 {
+        flex-grow: 2;
+    }
+
+    &__menu-title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    &__menu {
+
+        & li {
+            list-style: none;
+            margin:19px 0;
+        }
+    }
+    & a {
+      color: $white;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+
+      &.footer-sotial-link{
+          color: #6f6f6f;
+        fill: #6F6F6F;
+        fill-rule:evenodd;
+        clip-rule: evenodd;
+
+        &:hover {
+            color: $color-main;
+        }
+      }
+    }
+    
+    &__sotials {
+      margin-top:55px;
+      margin-bottom: 60px;
+    }
+
+    &__sotial-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & li {
+            list-style: none;
+            margin-right: 36px;
+
+         }
+    }
+
+  &__subscribe {
+      display: flex;
+
+    & input {
+      width: 291px;
+      height: 55px;
+      background-color: rgba(255,255,255,0.05);
+      padding: 18px 0px 17px 30px;
+      color: $white;
+      font-size: 14px;
+      line-height: 19px;
+      border:0px;
+      outline: none;
+     
+      &::-webkit-input-placeholder {
+        color: $white;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      &:-ms-input-placeholder      {
+        color: $white;
+        font-size: 14px;
+        line-height: 19px;
+      }
+     &:focus{
+         outline: none;
+     }
+     &:focus::-webkit-input-placeholder {color: transparent}
+     &:focus:-ms-input-placeholder      {color: transparent}
+    }
+   
+    & .subscribe__submit{
+        width: 69px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-main;
+        border:0px;
+    }
+  }
+
+    &__copyright {
+        padding:30px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #B3B3B3;
+        font-size: 14px;
+        line-height: 19px;
+        flex-wrap: wrap;
+
+        & a {
+        color:#B3B3B3;
+        margin-right:47px;
+
+        &:hover {
+            color: $color-main;
+        }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+    &__row {
+        justify-content: center;
+    }  
+
+    &__col-1 {
+        text-align: center;
+    }
+
+    &__col-2 {
+        text-align: center;
+    }
+
+    &__col-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    }
+    @media (max-width:480px) {
+    
+        &__copyright{
+            justify-content: center;
+        
+        & a {
+        margin-right: 17px;
+        margin-left: 17px;
+        margin-bottom: 17px;
+        margin-top: 17px;
+        display: inline-block;
+        }
+        }
+    }
+    @media (max-width:375px) {
+        
+        &__sotials {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        &__subscribe {
+    
+            & input {
+                width:200px;
+                padding: 18px 0 17px 10px;
+            }
+        }
+
+        &__sotial-list {
+        
+          & li {
+            margin-right: 0px;
+            }
+        }
+    }
+
+}

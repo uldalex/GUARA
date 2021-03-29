@@ -24,8 +24,6 @@ html(class='page  no-js', lang='ru')
     //- meta(name='theme-color', content='#000')
     //- meta(name='msapplication-navbutton-color', content='#000')
     //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     block meta
       title Home
@@ -40,15 +38,115 @@ html(class='page  no-js', lang='ru')
 
     .page__inner
       .page__content
-        +page-header()
-        h1.no-visible Заголовок страницы для сео
+        .top-block
+          +page-header()
+          img.parallax(src='img/list.png', alt='Logo', width='100%', height='100%')
+          .top-block__inner 
+            .top-block__row 
+              img.col-1(src='img/holod.png', alt='image')
+              .col-2 
+                h1 guara 
+                  span Бесплатный сервис по подбору холодильного оборудования от проверенных поставщиков
+                ul.no-list-style
+                  li Доставляем по России и СНГ
+                  li Монтируем на объекте
+                  li Запускаем в работу
+                  li Предоставляем гарантию 
+                ul.list-circle
+                  li Найдём оборудование любой сложности
+                  li Подготовим пакет документов для осуществления сделки
+                  li Обезопасим Ваш выбор от мошенников
+                a.btn(href="#zakaz" data-toggle="modal" data-target="#zakaz") Подобрать оборудование
+          #about
+        section.about 
+          .about__inner 
+            h3 Сфера деятельности
+              .subtitle Основные направления работы
+            ul.about__list
+              li.about-list__item 
+                 img.product-img(src='img/product-1.png', alt='Скороморозильные агрегаты', width='171', height='170')
+                 .product-title Скороморозильные агрегаты
+              li.about-list__item 
+                 img.product-img(src='img/product-2.png', alt='Шоковая заморозка', width='171', height='170')
+                 .product-title Шоковая заморозка
+              li.about-list__item 
+                 img.product-img(src='img/product-3.png', alt='Воздухоохладители', width='212', height='125')
+                 .product-title Воздухоохладители
+              li.about-list__item 
+                 img.product-img(src='img/product-4.png', alt='Холодильные централи', width='170', height='124')
+                 .product-title Холодильные централи
+              li.about-list__item 
+                 img.product-img(src='img/product-5.png', alt='Холодильные камеры', width='170', height='170')
+                 .product-title Холодильные камеры
+              li.about-list__item 
+                 img.product-img(src='img/product-6.png', alt='Чиллеры', width='170', height='162')
+                 .product-title Чиллеры
+              li.about-list__item 
+                 img.product-img(src='img/product-7.png', alt='Климатические камеры', width='171', height='170')
+                 .product-title Климатические камеры
+        section.feedback 
+          .feedback__inner
+            .feedback__row 
+              .col-1 
+                h3 Требуется нетиповое и нестандартное холодильное оборудование?
+                .subtitle Просто оставьте заявку и получите подробную <br> консультацию по подбору через 5 минут.
+              .col-2
+                form(action="post")
+                  input(type="tel" ) 
+                  input.btn(type="submit" value="Свяжитесь со мной")
+        section.advantage
+          #advantage
+          .advantage__inner 
+            h3 Наш сервис поможет не<br> только купить, но и ПРОДАТЬ!
+            .advantage__list 
+              li 
+                .advantage__number 01
+                .advantage__content Обширная база<br> покупателей
+              li 
+                .advantage__number 02
+                .advantage__content Принятие любых<br> нестандартных вариантов
+              li 
+                .advantage__number 03
+                .advantage__content Выкуп с <br> демонтажными <br>работами
+              li 
+                .advantage__number 04
+                .advantage__content Оценка стоимости<br>по фото
+            a.btn(href="#zakaz" data-toggle="modal" data-target="#zakaz") Узнать подробности
+            h3 Преимущества сервиса GUARA
 
-        
-          
+
+
       .page__footer-wrapper
         +page-footer()
           block footer
       +to-top()
+      +modal("zakaz","Заказать звонок")
+        .modal__body 
+          form#feedback_form.modal__form
+            .form-control
+              label(for="lastname") Фамилия
+              input#lastname.require(required="required" name="lastname" type="text" autocomplete="off")
+            .form-control
+              label(for="name") Имя
+              input#name.require(required="required" name="name" type="text" autocomplete="off")
+            .form-control
+              label(for="phone") Телефон с кодом страны и города
+              input#phone.require(required="required" name="phone" type="text" autocomplete="off")
+            .form-radio
+              input#property.require(required="required" name="property" type="radio" autocomplete="off")
+              label(for="property") Физическое лицо
+              input#company.require(required="required" name="property" type="radio" autocomplete="off")
+              label(for="company") Юридическое лицо
+            .form-control
+            label(for="message") Суть вашего вопроса
+              textarea#message(name="message" required="required") 
+             
+            .form-control
+              input.button(type="submit" value="Заказать звонок")
+            .form-agreement
+              input#agreement.required(type="checkbox" required="required" name="agreement" checked="checked" )
+              label(for="agreement") «Настоящим соглашаюсь на обработку ООО «Пепеляев Групп» моих персональных данных, указанных в заполненной мной форме на сайте <a href="www.pgplaw.ru">www.pgplaw.ru</a> в целях установления со мной контакта» 
+
 
     block page-bottom
       script(src='js/bundle.js')

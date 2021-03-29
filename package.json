@@ -1,12 +1,12 @@
 {
-  "name": "GUARA",
+  "name": "FREESOFT",
   "version": "1.0.0",
   "description": "Верстка проекта",
   "author": "uldalex",
   "license": "WTFPL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uldalex/GUARA.git"
+    "url": "https://github.com/uldalex/FREESOFT.git"
   },
   "scripts": {
     "test": "npm run test:pug && npm run test:style && npm run test:js",

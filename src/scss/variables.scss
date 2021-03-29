@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,800;1,500&display=swap');
 // Базовые цвета https://colorscheme.ru/color-converter.html
 
 $black:                       hsl(0, 0%, 0%);
@@ -13,10 +13,12 @@ $gray-lighter:                hsl(0, 0%, 93%);
 $gray-lightest:               hsl(0, 0%, 97%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  hsl(20, 98%, 58%);
-$color-success:               hsl(120, 39%, 54%);
-$color-danger:                hsl(2, 64%, 58%);
-$color-warning:               hsl(35, 84%, 62%);
+
+$color-main:                   #53C1F4;
+$color-alt:                    #FFE147;
+$color-dop:                    #252525;
+$color-alt-txt:                #262626;
+$color-calc:                   #414141;
 
 $color-vk:                    #5181B8;
 $color-fb:                    #3954A1;
@@ -30,7 +32,7 @@ $color-google:                #ffffff;
 
 $text-color:                  $black;
 $text-color-muted:            $gray-dark;
-$body-bg:                     $gray-lightest;
+$body-bg:                     $white;
 
 $link-color:                   $black;
 $link-color--hover:           $color-main;
@@ -41,7 +43,7 @@ $border-color:                $gray-lighter;
 
 // Базовая типографика
 
-$font-size:                   16px;
+$font-size:                   12px;
 
 $font-size-h1:                40px;
 $font-size-h2:                32px;
@@ -56,8 +58,8 @@ $line-height:                 28px;
 
 $typo-margin-vertical:        0;
 
-$font-family:                 'Open Sans', sans-serif;
-$font-family--monospace:    'Open Sans', sans-serif;
+$font-family:                 'Rubik', sans-serif;
+$font-family--monospace:    'Rubik', sans-serif;
 // Georgia, Times New Roman, Times, serif
 
 

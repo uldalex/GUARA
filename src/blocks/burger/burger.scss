@@ -6,13 +6,14 @@
   display: inline-block;
   position: relative;
   z-index: 1;
-  width: 30px;
+  width: 20px;
   border: none;
   padding: 0;
-  line-height: 30px;
+  line-height: 20px;
   background: transparent;
   user-select: none;
   cursor: pointer;
+  margin: 15px 26px;
 
   > span { // stylelint-disable-line  selector-combinator-blacklist
     display: inline-block;
@@ -38,11 +39,11 @@
     }
 
     &:before {
-      top: -10px;
+      top: -7px;
     }
 
     &:after {
-      top: 10px;
+      top: 8px;
     }
   }
 
@@ -66,5 +67,9 @@
         transform: rotate3d(0, 0, 1, -45deg);
       }
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 }
