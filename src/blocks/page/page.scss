@@ -69,7 +69,7 @@ body {
   text-align: left;
   color: $text-color;
   background-color: $body-bg;
-
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
@@ -462,6 +462,85 @@ ul.list-circle {
     right: 0;
     z-index:0;
 }
+.parallax1 {
+  position: absolute;
+  top: -400px;
+  width: 200px;
+  left: auto;
+  right: 0;
+  z-index: 0;
+
+  &--1 {
+    top: -300px;
+    opacity:0.3;
+  }
+  &--2 {
+    width:150px;
+    top: -600px;
+    transform:rotate(60deg)
+
+  }
+}
+.parallax2 {
+  position: absolute;
+  bottom: 40%;
+  width: 100px;
+  left: auto;
+  right: 300px;
+  z-index: 0;
+}
+.parallax3 {
+  position: absolute;
+  top: -35%;
+  width: 200px;
+  left: 0px;
+  right: auto;
+  z-index: 0;
+  transform: rotate(180deg);
+}
+.parallax4 {
+  position: absolute;
+  top: -5%;
+  width: 250px;
+  left: -140px;
+  right: auto;
+  z-index: 0;
+
+}
+.parallax5 {
+  position: absolute;
+  top: -5%;
+  width: 100px;
+  left: 140px;
+  right: auto;
+  z-index: 0;
+  opacity:0.5;
+
+}
+.parallax6 {
+  position: absolute;
+  top: -55%;
+  width: 200px;
+  left: -50px;
+  right: auto;
+  z-index: 0;
+  opacity:0.5;
+  transform: rotate(180deg);
+
+  &--1 {
+    width:150px;
+    top: -41%;
+  }
+
+}
+.parallax7 {
+  top: -55%;
+    left: auto;
+    right: 0;
+    position: absolute;
+    width: 200px;
+}
+
 
 .btn {
   background-color: $color-alt;
@@ -535,6 +614,7 @@ ul.list-circle {
 }
 
 .feedback {
+  position:relative;
 
   &__inner {
     @include container();
@@ -728,6 +808,7 @@ ul.list-circle {
 
 .brands {
   padding-top:100px;
+  position:relative;
 
   &__inner {
     @include container();
