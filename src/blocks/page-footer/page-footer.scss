@@ -3,7 +3,7 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-footer {
-    background-color: $gray-darkest ;
+    background-color: #252525 ;
     padding:60px 0;
     color:$white;
 
@@ -18,12 +18,15 @@
 
     &__col-1 {
         width: 300px;
+        margin-right:200px;
+        font-size: 18px;
+        line-height: 140%;
     }
     &__col-2 {
         width: 300px;
     }
     &__col-3 {
-        flex-grow: 2;
+      
     }
 
     &__menu-title {
@@ -35,6 +38,8 @@
     }
 
     &__menu {
+        padding:0;
+        margin:0;
 
         & li {
             list-style: none;
@@ -129,13 +134,10 @@
         line-height: 19px;
         flex-wrap: wrap;
 
-        & a {
+        & p {
         color:#B3B3B3;
         margin-right:47px;
 
-        &:hover {
-            color: $color-main;
-        }
         }
     }
 

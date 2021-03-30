@@ -114,26 +114,93 @@ html(class='page  no-js', lang='ru')
             a.btn(href="#zakaz" data-toggle="modal" data-target="#zakaz") Узнать подробности
             h3 Преимущества сервиса GUARA
             .advantage__row 
-              .advantage__col.col-1 
-                 svg(class="icons" width="127px" height="121px")
-                        use(xlink:href="img/sprite.svg#icon-1")
-              .advantage__col.col-2 
-                 svg(class="icons" width="92px" height="129px")
-                        use(xlink:href="img/sprite.svg#icon-2")
-              .advantage__col.col-1 
-                 svg(class="icons" width="108px" height="105px")
-                        use(xlink:href="img/sprite.svg#icon-3")
-              .advantage__col.col-1 
-                 svg(class="icons" width="103px" height="126px")
-                        use(xlink:href="img/sprite.svg#icon-4")
-              .advantage__col.col-1 
-                 svg(class="icons" width="83px" height="126px")
-                        use(xlink:href="img/sprite.svg#icon-5")
-              .advantage__col.col-1 
-                 svg(class="icons" width="120px" height="123px")
-                        use(xlink:href="img/sprite.svg#icon-6")
+              .advantage__col
+                .advantage__icon-text.advantage__icon-text--1
+                  img.product-img(src='img/icon-1.svg', alt='icon', width='127', height='121')
+                  p Проверенная <br>база поставщиков
+              .advantage__col
+                .advantage__icon-text.advantage__icon-text--2 
+                  p Возможность поиска<br>Б/У оборудования с<br> предоставлением гарантии
+                  img.product-img(src='img/icon-4.svg', alt='icon', width='92', height='129')
+                  
+              .advantage__col
+                .advantage__icon-text.advantage__icon-text--1
+                  img.product-img(src='img/icon-2.svg', alt='icon', width='108', height='105')
+                  p От начала и до конца<br> полностью бесплатный<br> сервис
+              .advantage__col
+                .advantage__icon-text.advantage__icon-text--2
+                  p Подбор оборудования<br> любого объема
+                  img.product-img(src='img/icon-5.svg', alt='icon', width='103', height='126') 
+                 
+              .advantage__col
+                .advantage__icon-text.advantage__icon-text--1
+                  img.product-img(src='img/icon-3.svg', alt='icon', width='83', height='126')
+                  p Расчет необходимой<br> мощности,<br> которая не будет <br>требовать лишних<br> энерго-затрат
+              .advantage__col
+                .advantage__icon-text.advantage__icon-text--2
+                  p Полностью исключён<br> риск мошенничества   
+                  img.product-img(src='img/icon-6.svg', alt='icon', width='120', height='123')
+        section#calculation.calculation 
+          .calculation__inner 
+            h3 Расчёт стоимости
+            .subtitle Онлайн заявка позволяет быстро и точно определить<br> необходимое оборудование под потребности.
+        section#brands.brands 
+          .brands__inner 
+            h3 Ипользуемые бренды холодильного оборудования
+            .brands__row
+             .col 
+               img.product-img(src='img/logo-1.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-2.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-3.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-4.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-5.png', alt='brand', width='375', height='122') 
+             .col 
+               img.product-img(src='img/logo-6.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-7.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-8.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-9.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-10.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-11.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-12.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-13.png', alt='brand', width='300', height='122') 
+             .col 
+               img.product-img(src='img/logo-14.png', alt='brand', width='300', height='122')
+        section.bottom-block
+          .bottom-block__inner 
+            .bottom-block__row 
+              .col-1
+                .subtitle Оставив заявку на нашем сайте Вам не придется звонить в десятки организаций, и задавать одни и те же вопросы.
+                img.product-img(src='img/holod_bot.png', alt='brand', width='710', height='525') 
+              .col-2
+                form(action="")
+                  .form-title Оставить заявку
+                  label(for="name") Ваше имя
+                  input#name(type="text") 
+                  label(for="phone") Ваш телефон
+                  input#phone(type="text")
+                  label(for="mail") Ваша почта
+                  input#mail(type="text")
+                  input.btn(type="submit" value="Свяжитесь со мной")
+                  .form-agreement
+                    label.checkbox-other(for="agreement")  
+                      input#agreement.required(type="checkbox" required="required" name="agreement" checked="checked" )
+                      span Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности
+                     
+                    
 
-              
+
+
 
 
 
@@ -165,8 +232,9 @@ html(class='page  no-js', lang='ru')
             .form-control
               input.button(type="submit" value="Заказать звонок")
             .form-agreement
-              input#agreement.required(type="checkbox" required="required" name="agreement" checked="checked" )
-              label(for="agreement") «Настоящим соглашаюсь на обработку ООО «Пепеляев Групп» моих персональных данных, указанных в заполненной мной форме на сайте <a href="www.pgplaw.ru">www.pgplaw.ru</a> в целях установления со мной контакта» 
+              label.checkbox-other(for="agreement")  
+                input#agreement.required(type="checkbox" required="required" name="agreement" checked="checked" )
+                span Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности
 
 
     block page-bottom

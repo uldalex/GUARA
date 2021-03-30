@@ -32,4 +32,22 @@ $('a.main-nav__link[href*="#"]').click(function () {
   }, 600);
 });
 
+$(window).scroll(function() {
+    if ($(".page-header").length) {
+       let sticky = $(".page-header")[0].offsetTop;
+       let open = 300;
+       if (window.pageYOffset > 300) {
+         $(".page-header").addClass("page-header--open");
+ 
+       }
+       else if (window.pageYOffset > 100) {
+         $(".page-header").addClass("page-header--fixed");
+ 
+       } else {
+         $(".page-header").removeClass("page-header--fixed");
+         $(".page-header").removeClass("page-header--open");
+  
+       }
+    }
+  });
 });

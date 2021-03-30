@@ -21,62 +21,27 @@ mixin page-footer(mods)
     .page-footer__inner
       .page-footer__row 
         .page-footer__col-1
-         .page-footer__menu-title Участиe
-         ul.page-footer__menu
-          li 
-            a(href="#") Добавить программу
-          li 
-            a(href="#") Добавить обзор или статью
-          li 
-            a(href="#") Форум
-         .page-footer__sotials
-            ul.page-footer__sotial-list 
-                li.page-footer__sotial-item 
-                  a.footer-sotial-link(href="#")
-                    svg.sotial(width="21px" height="12px")
-                              use(xlink:href="img/sprite.svg#vk")
-                li.page-footer__sotial-item 
-                  a.footer-sotial-link(href="#")
-                    svg.sotial(width="10px" height="20px")
-                              use(xlink:href="img/sprite.svg#ya")
-                li.page-footer__sotial-item 
-                  a.footer-sotial-link(href="#")
-                    svg.sotial(width="11px" height="20px")
-                              use(xlink:href="img/sprite.svg#fb")
-                li.page-footer__sotial-item 
-                  a.footer-sotial-link(href="#")
-                    svg.sotial(width="18px" height="17px")
-                              use(xlink:href="img/sprite.svg#google")
-                li.page-footer__sotial-item 
-                  a.footer-sotial-link(href="#")
-                    svg.sotial(width="21px" height="18px")
-                              use(xlink:href="img/sprite.svg#telegramm")
-                li.page-footer__sotial-item 
-                  a.footer-sotial-link(href="#")
-                    svg.sotial(width="24px" height="18px")
-                              use(xlink:href="img/sprite.svg#youtube")  
-              
+            +logo('/')
+              img.logo(src='img/logo_bottom.svg', alt='Logo', width='165', height='74')
+            p Бесплатный сервис по подбору холодильного оборудования
+
         .page-footer__col-2
-          .page-footer__menu-title Информация
+          .page-footer__menu-title Контакты
           ul.page-footer__menu
              li 
-               a(href="#") Для авторов программ
+               a(href="mailto:info@Guara.ru") info@Guara.ru
              li 
-               a(href="#") Контакты
+               a(style="color:#fff"  href="tel:+79777789243") 8 (977) 778-92-43
+
              li 
-               a(href="#") Реклама 
+               a(style="color:#fff"  href="tel:+79778705") 8 (977) 700-87-05
         .page-footer__col-3
-          .page-footer__menu-title Информация
-          form.page-footer__subscribe
-           input(type="mail", placeholder="thomandersen1@gmail.com")
-           button.subscribe__submit
-            svg(class="icon-search" width="20px" height="13px")
-              use(xlink:href="img/sprite.svg#arrowbig")
+        
       .divider
       .page-footer__copyright
         div 
-          a(href="#")  DMCA Policy
-          a(href="#")  Условия и правила 
-        div © 1998-2017 freeSOFT ®
+          p  Информация на сайте не является публичной офертой.
+
+        div © 1998-2017 GUARA ®
 
       block
