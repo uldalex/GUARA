@@ -1322,8 +1322,8 @@ ul.list-circle {
     margin:0 auto;
   }
   & .step2__wrapper {
-    width: 100%;
-    margin-left: 0;
+    width: 160%;
+    margin-left: -30%;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -1335,7 +1335,7 @@ ul.list-circle {
       flex-direction:column;
       align-items: center;
       justify-content: center;
-      width:100%;
+   
 
       & label {
         font-size: 14px;
