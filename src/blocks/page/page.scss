@@ -1748,7 +1748,7 @@ ul.list-circle {
  .modal__content{
    background-color: transparent;
 
-  & .close span:before, .close span:after {
+   & .close span:before, .close span:after {
     content: '';
     position: absolute;
     top: 0;
