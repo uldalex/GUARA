@@ -147,4 +147,33 @@ $(window).scroll(function() {
     $('.step-3').addClass('active');
     return false;
   });
+  $('.step-1').on('click', function(){
+    $(this).addClass('active');
+    $('.step-2, .step-3, .step-4').removeClass('active');
+    $('.step1').css({'display':'block'});
+    $('.btn.step1').css({'display':'flex'});
+    $('.step2, .step3, .step4').css({'display':'none'});
+  });
+  $('.step-2').on('click', function(){
+    $(this).addClass('active');
+    $('.step-1, .step-3, .step-4').removeClass('active');
+    $('.step2').css({'display':'block'});
+    $('.btn.step2').css({'display':'flex'});
+    $('.step1, .step3, .step4').css({'display':'none'});
+  });
+  $('.step-3').on('click', function(){
+    $(this).addClass('active');
+    $('.step-2, .step-1, .step-4').removeClass('active');
+    $('.step3').css({'display':'block'});
+    $('.btn.step3').css({'display':'flex'});
+    $('.step2, .step1, .step4').css({'display':'none'});
+  });
+  $('.step-4').on('click', function(){
+    $(this).addClass('active');
+    $('.step-2, .step-3, .step-1').removeClass('active');
+    $('.step4').css({'display':'block'});
+    $('.btn.step4').css({'display':'flex'});
+    $('.step2, .step3, .step1').css({'display':'none'});
+    
+  });
 });
