@@ -1310,7 +1310,12 @@ ul.list-circle {
       flex-direction:column;
       align-items: center;
       justify-content: center;
-
+     
+     
+      & div {
+        position: relative;
+        display:block;
+      }
       & label {
         font-size: 16px;
         margin-top: 30px;
