@@ -21,9 +21,13 @@
         margin-right:200px;
         font-size: 18px;
         line-height: 140%;
+        @media(max-width: 768px){
+            margin-right:0px;
+        }
     }
     &__col-2 {
         width: 300px;
+        padding-top: 2rem;
     }
     &__col-3 {
       
@@ -31,10 +35,12 @@
 
     &__menu-title {
       font-weight: bold;
-      font-size: 14px;
+      font-size: 30px;
       line-height: 19px;
       text-transform: uppercase;
       margin-bottom: 40px;
+
+
     }
 
     &__menu {
@@ -163,11 +169,23 @@
     }
     }
     @media (max-width:480px) {
-    
+
+        &__col-1 {
+            text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+        }
+        & .logo {
+            width:165px;
+            min-width:165px;
+        }
         &__copyright{
             justify-content: center;
+            text-align: center;
         
-        & a {
+        & p {
         margin-right: 17px;
         margin-left: 17px;
         margin-bottom: 17px;

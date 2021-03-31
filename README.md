@@ -1,11 +1,8 @@
 #  проект FREESOFT  ![Test Status](https://travis-ci.org/nicothin/NTH-start-project.svg?branch=master) [![devDependencies Status](https://david-dm.org/nicothin/NTH-start-project/dev-status.svg)](https://david-dm.org/nicothin/NTH-start-project?type=dev) [![dependencies Status](https://david-dm.org/nicothin/NTH-start-project/status.svg)](https://david-dm.org/nicothin/NTH-start-project)
 
 ## ВЕРСТКА
--  [Главная](https://uldalex.github.io/FREESOFT/build/index.html)
--  [Список](https://uldalex.github.io/FREESOFT/build/listing-article.html)
--  [Отдельная новость](https://uldalex.github.io/FREESOFT/build/article.html)
--  [Тип новости - картинка-заголовок](https://uldalex.github.io/FREESOFT/build/article-type.html)
--  [Listing-app](https://uldalex.github.io/FREESOFT/build/listing-app.html)
+-  [смотреть](https://uldalex.github.io/GUARA/build/index.html)
+
 
 
 ## Парадигма

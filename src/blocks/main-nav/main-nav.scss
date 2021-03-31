@@ -189,6 +189,7 @@
   @media (max-width: 768px){
     display: flex;
     align-items: flex-start;
+    order: 2;
 
     &__list{
     position: absolute;
@@ -197,6 +198,13 @@
     width: 300px;
     background-color: $gray-darkest;
   
+    }
+
+    &__link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height:41px;
+      text-transform:uppercase;
     }
     & .search {
     display: block;

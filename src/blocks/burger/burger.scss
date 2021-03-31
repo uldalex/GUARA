@@ -23,7 +23,7 @@
     vertical-align: middle;
     font-size: 0;
     color: transparent;
-    background: $toggler-part-bg-color;
+    background: #484848;
     transition: background $transition-time $transition-time;
 
     &:before,
@@ -33,7 +33,7 @@
       left: 0;
       width: 100%;
       height: $toggler-part-height;
-      background: $toggler-part-bg-color;
+      background: #484848;
       transform-origin: 50% 50%;
       transition: top $transition-time $transition-time, transform $transition-time;
     }
@@ -61,10 +61,12 @@
 
       &:before {
         transform: rotate3d(0, 0, 1, 45deg);
+        background: #ffffff;
       }
 
       &:after {
         transform: rotate3d(0, 0, 1, -45deg);
+        background: #ffffff;
       }
     }
   }

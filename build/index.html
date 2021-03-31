@@ -46,7 +46,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           </div>
         </header><img class="parallax" src="img/list.png" alt="Logo" width="100%" height="100%">
         <div class="top-block__inner">
-          <div class="top-block__row"> <img class="col-1" src="img/holod.png" alt="image">
+          <div class="top-block__row">
+            <div class="col-1"><img src="img/holod.png" alt="image"></div>
             <div class="col-2">
               <h1>guara <span>Бесплатный сервис по подбору холодильного оборудования от проверенных поставщиков</span></h1>
               <ul class="no-list-style">
@@ -59,7 +60,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <li>Найдём оборудование любой сложности</li>
                 <li>Подготовим пакет документов для осуществления сделки</li>
                 <li>Обезопасим Ваш выбор от мошенников</li>
-              </ul><a class="btn" href="#zakaz" data-toggle="modal" data-target="#zakaz">Подобрать оборудование</a>
+              </ul><a class="btn" href="#calculation">Подобрать оборудование</a>
             </div>
           </div>
         </div>
@@ -168,6 +169,63 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
         <div class="calculation__inner">
           <h3>Расчёт стоимости</h3>
           <div class="subtitle">Онлайн заявка позволяет быстро и точно определить<br> необходимое оборудование под потребности.</div>
+          <div class="block-calc">
+            <div class="block-calc__step-1">
+              <div class="block-calc__title step1">Шаг 1</div>
+              <div class="block-calc__title step2">Шаг 2</div>
+              <div class="block-calc__title step3">Шаг 3</div>
+              <div class="block-calc__title step4">Шаг 4</div>
+              <div class="block-calc__steps"><span class="step-1 active"></span><span class="step-2"></span><span class="step-3"></span><span class="step-4"></span></div>
+              <div class="block-calc__subtitle step1">У вас уже есть ТЗ?</div>
+              <div class="block-calc__subtitle step2">Температурный режим</div>
+              <p class="step1">Тогда просто прикрепите его к форме</p>
+              <p class="step3">Поля отмеченные * обязательны для заполнения</p>
+              <p class="step4">Поля отмеченные * обязательны для заполнения</p>
+              <form>
+                <div class="input__wrapper step1"><input class="input input__file" type="file" name="file" id="input__file"><label class="input__file-button" for="input__file"><span class="input__file-icon-wrapper"><img class="input__file-icon" src="img/download.svg" alt="icon" width="25" height="26"></span><span class="input__file-button-text">Загрузить файл</span></label></div>
+                <div class="col-1 step1">
+                  <div class="title">Размещение камеры</div>
+                  <div class="form-control"><input class="radio" id="razm" type="radio" required="required" name="razm" checked="checked"><label for="razm">На улице</label></div>
+                  <div class="form-control"><input class="radio" id="razm" type="radio" required="required" name="razm"><label for="razm"> В помещении</label></div>
+                </div>
+                <div class="col-1 step1">
+                  <div class="title">Эксплуатация</div>
+                  <div class="form-control"><input class="radio" id="expl" type="radio" required="required" name="expl" checked="checked"><label for="expl">Новое оборудование</label></div>
+                  <div class="form-control"><input class="radio" id="expl" type="radio" required="required" name="expl"><label for="expl">span Б/У оборудование</label></div>
+                </div>
+                <div class="step2">
+                  <div class="step2__wrapper">
+                    <div><img src="img/gr1.svg" alt="icon" width="58" height="157"><input class="radio" id="temp" type="radio" required="required" name="temp" checked="checked"><label for="temp">Среднетемпературный <br>( 5-100 С )</label></div>
+                    <div><img src="img/gr2.svg" alt="icon" width="58" height="157"><input class="radio" id="temp" type="radio" required="required" name="temp" checked="checked"><label for="temp">Низкотемпературный <br>( -10 - 250 С )</label></div>
+                    <div><img src="img/gr3.svg" alt="icon" width="58" height="157"><input class="radio" id="temp" type="radio" required="required" name="temp" checked="checked"><label for="temp">Шоковая заморозка <br>( -30 - 400 С )</label></div>
+                  </div>
+                </div>
+                <div class="step3">
+                  <div class="step3__wrapper">
+                    <div class="col-2"> <span>Объем помещения (Д*Ш*В) *</span><input class="text" id="ob" required="required" name="ob" type="text" autocomplete="off"><span>Утепление</span>
+                      <div><input class="radio" id="ut" type="radio" required="required" name="ut" checked="checked"><label for="ut">Пенополиуретан</label></div>
+                      <div><input class="radio" id="ut" type="radio" required="required" name="ut" checked="checked"><label for="ut">Пенополистерол</label></div><span>Толщина утепления, мм</span>
+                      <div><input class="radio" id="tol" type="radio" required="required" name="tol" checked="checked"><label for="ut">60</label></div>
+                      <div><input class="radio" id="tol" type="radio" required="required" name="tol" checked="checked"><label for="ut">80</label></div>
+                      <div><input class="radio" id="tol" type="radio" required="required" name="tol" checked="checked"><label for="ut">100</label></div>
+                    </div>
+                    <div class="col-2"><span>Продукт хранения *</span><input class="text" id="pr" required="required" name="pr" type="text" autocomplete="off"><span>Объем продукта, кг *</span><input class="text" id="ob" required="required" name="ob" type="text" autocomplete="off"><span>Температура в камере *</span><input class="text" id="tkam" required="required" name="tkam" type="text" autocomplete="off"><span>Город *</span><input class="text" id="sity" required="required" name="sity" type="text" autocomplete="off"></div>
+                  </div>
+                </div>
+                <div class="step4">
+                  <div class="step4__wrapper">
+                    <div class="col-3">
+                      <div class="step4__row"> <span>Юридическая форма</span><input class="radio" id="ur" type="radio" required="required" name="ur" checked="checked"><label for="ur">Физ. лицо</label><input class="radio" id="ur" type="radio" required="required" name="ur" checked="checked"><label for="ur">Юр. лицо</label></div><span>ФИО *</span><input class="text" id="fio" required="required" name="fio" type="text" autocomplete="off"><span>Телефон *</span><input class="text" id="ph" required="required" name="ph" type="text" autocomplete="off">
+                    </div>
+                    <div class="col-3"> <span>E-mail *</span><input class="text" id="ma" required="required" name="ma" type="text" autocomplete="off"><span>Комментарий</span><input class="text" id="msg" required="required" name="msg" type="text" autocomplete="off"></div>
+                  </div>
+                </div><a class="btn step1" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a>
+                <div class="btns"><a class="back step2" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><a class="btn step2" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a></div>
+                <div class="btns"><a class="back step3" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><a class="btn step3" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a></div>
+                <div class="btns"><a class="back step4" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><input class="btn button step4" type="submit" value="Отправить"></div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
       <section class="brands" id="brands"> <img class="parallax5" src="img/list1.png" alt="Logo" width="100px" height="135px"><img class="parallax6 parallax6--1" src="img/list1.png" alt="Logo" width="100px" height="135px"><img class="parallax6" src="img/list5.png" alt="Logo" width="100px" height="135px"><img class="parallax7" src="img/list5.png" alt="Logo" width="100px" height="135px">
@@ -241,16 +299,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
       <div class="modal__dialog" role="document">
         <div class="modal__content">
           <div class="modal__header"><span class="close modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
-            <h4 class="modal__title">Заказать звонок</h4>
+            <h4 class="modal__title"></h4>
           </div>
           <div class="modal__body">
-            <form class="modal__form" id="feedback_form">
-              <div class="form-control"><label for="lastname">Фамилия</label><input class="require" id="lastname" required="required" name="lastname" type="text" autocomplete="off"></div>
-              <div class="form-control"><label for="name">Имя</label><input class="require" id="name" required="required" name="name" type="text" autocomplete="off"></div>
-              <div class="form-control"><label for="phone">Телефон с кодом страны и города</label><input class="require" id="phone" required="required" name="phone" type="text" autocomplete="off"></div>
-              <div class="form-radio"><input class="require" id="property" required="required" name="property" type="radio" autocomplete="off"><label for="property">Физическое лицо</label><input class="require" id="company" required="required" name="property" type="radio" autocomplete="off"><label for="company">Юридическое лицо</label></div>
-              <div class="form-control"></div><label for="message">Суть вашего вопроса<textarea id="message" name="message" required="required"> </textarea></label>
-              <div class="form-control"><input class="button" type="submit" value="Заказать звонок"></div>
+            <form action="">
+              <div class="form-title">Оставить заявку</div><label for="name">Ваше имя</label><input id="name" type="text"><label for="phone">Ваш телефон</label><input id="phone" type="text"><label for="mail">Ваша почта</label><input id="mail" type="text"><input class="btn" type="submit" value="Свяжитесь со мной">
               <div class="form-agreement"><label class="checkbox-other" for="agreement"> <input class="required" id="agreement" type="checkbox" required="required" name="agreement" checked="checked"><span>Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span></label></div>
             </form>
           </div>

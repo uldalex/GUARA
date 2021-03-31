@@ -105,7 +105,7 @@ $grid-gutter-width:           30px !default;
 //------------------------------------------------------------------------------
 
 @mixin row (
-  $xs-grid-gutter:  $grid-gutter-width,
+  $xs-grid-gutter:  0,
   $sm-grid-gutter:  $grid-gutter-width,
   $md-grid-gutter:  $grid-gutter-width,
   $lg-grid-gutter:  $grid-gutter-width,
