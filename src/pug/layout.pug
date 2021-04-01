@@ -47,7 +47,7 @@ html(class='page  no-js', lang='ru')
                 img(src='img/holod.png', alt='image')
               .col-2 
                 h1 guara 
-                  span Бесплатный сервис по подбору холодильного оборудования от проверенных поставщиков
+                  span Сервис по подбору холодильного оборудования от проверенных поставщиков
                 ul.no-list-style
                   li Доставляем по России и СНГ
                   li Монтируем на объекте
@@ -57,7 +57,7 @@ html(class='page  no-js', lang='ru')
                   li Найдём оборудование любой сложности
                   li Подготовим пакет документов для осуществления сделки
                   li Обезопасим Ваш выбор от мошенников
-                a.btn(href="#calculation" ) Подобрать оборудование
+                a.btn(href="#kalkulation" data-toggle="modal" data-target="#kalkulation"  ) Подобрать оборудование
           #about
         section.about 
           .about__inner 
@@ -94,7 +94,7 @@ html(class='page  no-js', lang='ru')
                 .subtitle Просто оставьте заявку и получите подробную <br> консультацию по подбору через 5 минут.
               .col-2
                 form(action="post")
-                  input(type="tel" ) 
+                  input(type="tel" required="required" placeholder="+7 (___)___-__-__") 
                   input.btn(type="submit" value="Свяжитесь со мной")
         section.advantage
           img.parallax1.parallax1--1(src='img/list1.png', alt='Logo', width='200px', height='146px')
@@ -177,86 +177,86 @@ html(class='page  no-js', lang='ru')
                   .col-1.step1
                     .title Размещение камеры
                     div.form-control
-                      input#razm.radio(type="radio" required="required" name="razm" checked="checked" )
+                      input#razm.radio(type="radio"  name="razm" checked="checked" )
                       label(for="razm") На улице
                     div.form-control
-                      input#razm.radio(type="radio" required="required" name="razm"  )
+                      input#razm.radio(type="radio"  name="razm"  )
                       label(for="razm")  В помещении
                   .col-1.step1
                     .title Эксплуатация
                     div.form-control
-                      input#expl.radio(type="radio" required="required" name="expl" checked="checked" )
+                      input#expl.radio(type="radio" name="expl" checked="checked" )
                       label(for="expl") Новое оборудование
                     div.form-control
-                      input#expl.radio(type="radio" required="required" name="expl" )
+                      input#expl.radio(type="radio"  name="expl" )
                       label(for="expl") Б/У оборудование
                   .step2
                     .step2__wrapper
                       div
                         img(src='img/gr1.svg', alt='icon', width='58', height='157')
                         div
-                          input#temp.radio(type="radio" required="required" name="temp" checked="checked" )
-                          label(for="temp") Среднетемпературный <br>( 5-100 С )
+                          input#temp.radio(type="radio"  name="temp" checked="checked" )
+                          label(for="temp") Среднетемпературный <br>( 5<sup>0</sup>-10<sup>0</sup> С )
                       div
                         img(src='img/gr2.svg', alt='icon', width='58', height='157')
                         div
-                          input#temp.radio(type="radio" required="required" name="temp" checked="checked" )
-                          label(for="temp") Низкотемпературный <br>( -10 - 250 С )
+                          input#temp.radio(type="radio" name="temp" checked="checked" )
+                          label(for="temp") Низкотемпературный <br>( -10<sup>0</sup> - 25<sup>0</sup> С )
                       div
                         img(src='img/gr3.svg', alt='icon', width='58', height='157')
                         div
-                          input#temp.radio(type="radio" required="required" name="temp" checked="checked" )
-                          label(for="temp") Шоковая заморозка <br>( -30 - 400 С )
+                          input#temp.radio(type="radio"  name="temp" checked="checked" )
+                          label(for="temp") Шоковая заморозка <br>( -30<sup>0</sup> - 40<sup>0</sup> С )
                   .step3 
                     .step3__wrapper
                       .col-2 
                         span Объем помещения (Д*Ш*В) *
-                        input#ob.text(required="required" name="ob" type="text" autocomplete="off")
+                        input#ob.text( name="ob" type="text" autocomplete="off")
                         span Утепление
                         div
-                          input#ut.radio(type="radio" required="required" name="ut" checked="checked" )
+                          input#ut.radio(type="radio"  name="ut" checked="checked" )
                           label(for="ut") Пенополиуретан
                         div
-                          input#ut.radio(type="radio" required="required" name="ut" checked="checked" )
+                          input#ut.radio(type="radio" name="ut" checked="checked" )
                           label(for="ut") Пенополистерол
                         span Толщина утепления, мм
                         div
-                          input#tol.radio(type="radio" required="required" name="tol" checked="checked" )
+                          input#tol.radio(type="radio"  name="tol" checked="checked" )
                           label(for="ut") 60
                         div
-                          input#tol.radio(type="radio" required="required" name="tol" checked="checked" )
+                          input#tol.radio(type="radio"  name="tol" checked="checked" )
                           label(for="ut") 80
                         div
-                          input#tol.radio(type="radio" required="required" name="tol" checked="checked" )
+                          input#tol.radio(type="radio"  name="tol" checked="checked" )
                           label(for="ut") 100
                       .col-2
                         span Продукт хранения *
-                        input#pr.text(required="required" name="pr" type="text" autocomplete="off")
+                        input#pr.text( name="pr" type="text" autocomplete="off")
                         span Объем продукта, кг *
-                        input#ob.text(required="required" name="ob" type="text" autocomplete="off")
+                        input#ob.text( name="ob" type="text" autocomplete="off")
                         span Температура в камере *
-                        input#tkam.text(required="required" name="tkam" type="text" autocomplete="off")
+                        input#tkam.text( name="tkam" type="text" autocomplete="off")
                         span Город *
-                        input#sity.text(required="required" name="sity" type="text" autocomplete="off")
+                        input#sity.text(name="sity" type="text" autocomplete="off")
                   .step4
                     .step4__wrapper
                       
                       .col-3 
                         div.step4__row 
                           span Юридическая форма
-                          input#ur.radio(type="radio" required="required" name="ur" checked="checked" )
+                          input#ur.radio(type="radio"  name="ur" checked="checked" )
                           label(for="ur") Физ. лицо
-                          input#ur.radio(type="radio" required="required" name="ur" checked="checked" )
+                          input#ur.radio(type="radio"  name="ur" checked="checked" )
                           label(for="ur") Юр. лицо
-                        span ФИО *
-                        input#fio.text(required="required" name="fio" type="text" autocomplete="off")
+                        span ФИО 
+                        input#fio.text( name="fio" type="text" autocomplete="off")
                         span Телефон *
-                        input#ph.text(required="required" name="ph" type="text" autocomplete="off")
+                        input#ph.text(required="required" name="ph" type="tel" placeholder="+7 (___)___-__-__" autocomplete="off")
                       .col-3 
-                        span E-mail *
-                        input#ma.text(required="required" name="ma" type="text" autocomplete="off")
+                        span E-mail 
+                        input#ma.text( name="ma" type="text" autocomplete="off")
                         span Комментарий
-                        input#msg.text(required="required" name="msg" type="text" autocomplete="off")
+                        input#msg.text( name="msg" type="text" autocomplete="off")
 
 
 
@@ -335,7 +335,7 @@ html(class='page  no-js', lang='ru')
                   label(for="name") Ваше имя
                   input#name(type="text") 
                   label(for="phone") Ваш телефон
-                  input#phone(type="text")
+                  input#phone(type="tel" placeholder="+7 (___)___-__-__")
                   label(for="mail") Ваша почта
                   input#mail(type="text")
                   input.btn(type="submit" value="Свяжитесь со мной")
@@ -362,7 +362,7 @@ html(class='page  no-js', lang='ru')
                   label(for="name") Ваше имя
                   input#name(type="text") 
                   label(for="phone") Ваш телефон
-                  input#phone(type="text")
+                  input#phone(type="tel" placeholder="+7 (___)___-__-__")
                   label(for="mail") Ваша почта
                   input#mail(type="text")
                   input.btn(type="submit" value="Свяжитесь со мной")
@@ -370,6 +370,140 @@ html(class='page  no-js', lang='ru')
                     label.checkbox-other(for="agreement")  
                       input#agreement.required(type="checkbox" required="required" name="agreement" checked="checked" )
                       span Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности
+      +modal("kalkulation","")
+        .modal__body 
+            .block-calc
+              .block-calc__step-1
+                .block-calc__title.step1 Шаг 1
+                .block-calc__title.step2 Шаг 2
+                .block-calc__title.step3 Шаг 3
+                .block-calc__title.step4 Шаг 4
+                .block-calc__steps
+                  span.step-1.active
+                  span.step-2
+                  span.step-3
+                  span.step-4
+                .block-calc__subtitle.step1 У вас уже есть ТЗ?
+                .block-calc__subtitle.step2 Температурный режим
+                p.step1 Тогда просто прикрепите его к форме
+                p.step3 Поля отмеченные * обязательны для заполнения
+                p.step4 Поля отмеченные * обязательны для заполнения
+                form
+                  .input__wrapper.step1
+                     input(type="file" name="file" id="input__file" class="input input__file")
+                     label.input__file-button(for="input__file")
+                      span.input__file-icon-wrapper
+                        img.input__file-icon(src='img/download.svg', alt='icon', width='25', height='26')
+                      span.input__file-button-text Загрузить файл
+                  .col-1.step1
+                    .title Размещение камеры
+                    div.form-control
+                      input#razm.radio(type="radio"  name="razm" checked="checked" )
+                      label(for="razm") На улице
+                    div.form-control
+                      input#razm.radio(type="radio"  name="razm"  )
+                      label(for="razm")  В помещении
+                  .col-1.step1
+                    .title Эксплуатация
+                    div.form-control
+                      input#expl.radio(type="radio" name="expl" checked="checked" )
+                      label(for="expl") Новое оборудование
+                    div.form-control
+                      input#expl.radio(type="radio"  name="expl" )
+                      label(for="expl") Б/У оборудование
+                  .step2
+                    .step2__wrapper
+                      div
+                        img(src='img/gr1.svg', alt='icon', width='58', height='157')
+                        div
+                          input#temp.radio(type="radio"  name="temp" checked="checked" )
+                          label(for="temp") Среднетемпературный <br>( 5<sup>0</sup>-10<sup>0</sup> С )
+                      div
+                        img(src='img/gr2.svg', alt='icon', width='58', height='157')
+                        div
+                          input#temp.radio(type="radio" name="temp" checked="checked" )
+                          label(for="temp") Низкотемпературный <br>( -10<sup>0</sup> - 25<sup>0</sup> С )
+                      div
+                        img(src='img/gr3.svg', alt='icon', width='58', height='157')
+                        div
+                          input#temp.radio(type="radio"  name="temp" checked="checked" )
+                          label(for="temp") Шоковая заморозка <br>( -30<sup>0</sup> - 40<sup>0</sup> С )
+                  .step3 
+                    .step3__wrapper
+                      .col-2 
+                        span Объем помещения (Д*Ш*В) *
+                        input#ob.text( name="ob" type="text" autocomplete="off")
+                        span Утепление
+                        div
+                          input#ut.radio(type="radio"  name="ut" checked="checked" )
+                          label(for="ut") Пенополиуретан
+                        div
+                          input#ut.radio(type="radio" name="ut" checked="checked" )
+                          label(for="ut") Пенополистерол
+                        span Толщина утепления, мм
+                        div
+                          input#tol.radio(type="radio"  name="tol" checked="checked" )
+                          label(for="ut") 60
+                        div
+                          input#tol.radio(type="radio"  name="tol" checked="checked" )
+                          label(for="ut") 80
+                        div
+                          input#tol.radio(type="radio"  name="tol" checked="checked" )
+                          label(for="ut") 100
+                      .col-2
+                        span Продукт хранения *
+                        input#pr.text( name="pr" type="text" autocomplete="off")
+                        span Объем продукта, кг *
+                        input#ob.text( name="ob" type="text" autocomplete="off")
+                        span Температура в камере *
+                        input#tkam.text( name="tkam" type="text" autocomplete="off")
+                        span Город *
+                        input#sity.text(name="sity" type="text" autocomplete="off")
+                  .step4
+                    .step4__wrapper
+                      
+                      .col-3 
+                        div.step4__row 
+                          span Юридическая форма
+                          input#ur.radio(type="radio"  name="ur" checked="checked" )
+                          label(for="ur") Физ. лицо
+                          input#ur.radio(type="radio"  name="ur" checked="checked" )
+                          label(for="ur") Юр. лицо
+                        span ФИО 
+                        input#fio.text( name="fio" type="text" autocomplete="off")
+                        span Телефон *
+                        input#ph.text(required="required" name="ph" type="tel" placeholder="+7 (___)___-__-__" autocomplete="off")
+                      .col-3 
+                        span E-mail 
+                        input#ma.text( name="ma" type="text" autocomplete="off")
+                        span Комментарий
+                        input#msg.text( name="msg" type="text" autocomplete="off")
+
+
+
+
+
+                  a.btn.step1(href="#") Следующий шаг
+                    img(src='img/arrow.svg', alt='следующий шаг', width='29', height='24')
+                  div.btns
+                    a.back.step2(href="#") 
+                      img(src='img/arrow_white.svg', alt='назад', width='29', height='24')
+                      | Назад
+                    a.btn.step2(href="#") Следующий шаг
+                      img(src='img/arrow.svg', alt='следующий шаг', width='29', height='24')
+                  div.btns
+                    a.back.step3(href="#") 
+                      img(src='img/arrow_white.svg', alt='назад', width='29', height='24')
+                      | Назад
+                    a.btn.step3(href="#") Следующий шаг
+                      img(src='img/arrow.svg', alt='следующий шаг', width='29', height='24')
+                  div.btns
+                    a.back.step4(href="#") 
+                      img(src='img/arrow_white.svg', alt='назад', width='29', height='24')
+                      | Назад
+                    input.btn.button.step4(type="submit" value="Отправить")
+            
+         
 
 
     block page-bottom

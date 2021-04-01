@@ -413,7 +413,7 @@ ul.list-circle {
   }
   & h1 {
     font-weight: bold;
-    font-size: 3.3rem;
+    font-size: 2.8rem;
     line-height: 4rem;
     text-transform: uppercase;
     margin-top:0px;
@@ -1210,6 +1210,8 @@ ul.list-circle {
     &:hover {
       background-color: #fbd305;
     }
+
+
   }
    
   .input__file {
@@ -1276,11 +1278,12 @@ ul.list-circle {
         transition:all 0.5s ease;
       }
     }
+ 
   }
   & .btns {
     
     & .btn {
-      width: auto; 
+      width: 300px; 
       
       &.button {
       width: 300px;
@@ -1325,6 +1328,7 @@ ul.list-circle {
 
   @media (max-width: 480px) {
     width: 90vw;
+    max-width: 100%;
     margin:0 auto;
   }
   & .step2__wrapper {
@@ -1786,69 +1790,103 @@ ul.list-circle {
     transform-origin: 50% 50%;
   }
  }
-.modal__body {
-  display: flex;
-  justify-content: center;
- form {
-  background: #FFE147;
-  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.25);
-  border-radius: 19px;
-  max-width: 460px;
-  padding:38px 60px;
-  display:flex;
-  flex-direction: column;
+ #zakaz {
+  & .modal__body {
+    display: flex;
+    justify-content: center;
+  form {
+    background: #FFE147;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    max-width: 460px;
+    padding:38px 60px;
+    display:flex;
+    flex-direction: column;
 
 
-  & .form-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 36px;
+    & .form-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom:50px;
+    }
+
+    & input {
+      height:37px;
+      border:0px;
+      border-bottom:1px solid #656565;
+      background-color: transparent;
+
+      &.btn {
+        background-color: $white;
+        color: #252525;
+        box-shadow: 0px 0px 20px rgba(141, 141, 141, 0.15);
+        border-radius: 54px;
+        margin-top:60px;
+        height:60px;
+      }
+    }
+
+    & label {
+      color: #656565;
+      font-size:18px;
+      margin-top:33px;
+    }
+
+  @media (max-width:768px) {
+    padding: 20px 30px;
+
+    & .form-title {
+    font-weight: 600;
+    font-size: 25px;
     line-height: 43px;
-    margin-bottom:50px;
-  }
-
-  & input {
-    height:37px;
-    border:0px;
-    border-bottom:1px solid #656565;
-    background-color: transparent;
-
-    &.btn {
-      background-color: $white;
-      color: #252525;
-      box-shadow: 0px 0px 20px rgba(141, 141, 141, 0.15);
-      border-radius: 54px;
-      margin-top:60px;
-      height:60px;
+    margin-bottom: 20px;
     }
-  }
-
-  & label {
-    color: #656565;
-    font-size:18px;
-    margin-top:33px;
-  }
-
- @media (max-width:768px) {
-  padding: 20px 30px;
-
-  & .form-title {
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 43px;
-  margin-bottom: 20px;
-  }
-  & label {
-    margin-top: 13px;
-  }
-  & input {
-    &.btn {
-      margin-top: 20px;
-      margin-bottom: 0px;
+    & label {
+      margin-top: 13px;
     }
+    & input {
+      &.btn {
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+    }
+
+
   }
-
-
+  }
+  }
  }
-}
-}
+ #kalkulation{
+   .modal__dialog {
+    width: 80vw;
+    max-width:1200px;
+
+    @media(max-width: 480px) {
+      width:98vw;
+    }
+    & .close{
+      top: 25px;
+      right: 25px;
+     
+      & span {
+        &:before {
+          background-color: #ffffff;
+        }
+        &:after {
+          background-color: #ffffff;
+        }
+
+      }
+    }
+   }
+ }
+
+
+
+
+ ::-webkit-scrollbar-track {background-color: transparent; border-radius: 3px;}
+ ::-webkit-scrollbar {width: 6px;}
+ ::-webkit-scrollbar-thumb {border-radius: 3px;background: #727171}
+// &:hover::-webkit-scrollbar-thumb {background: #6a7d9b;}
