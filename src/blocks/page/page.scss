@@ -538,8 +538,8 @@ ul.list-circle {
   position: absolute;
   top: -35%;
   width: 200px;
-  left: 0px;
-  right: auto;
+
+  right:90%;
   z-index: 0;
   transform: rotate(180deg);
   transition:all 0.5s ease;
@@ -818,6 +818,7 @@ ul.list-circle {
    &__list {
      display: flex;
      flex-wrap: wrap;
+     justify-content: center;
 
      & li {
        list-style:none;
@@ -830,25 +831,25 @@ ul.list-circle {
 
     
       &:nth-child(3) {
-        margin-left:80px;
+        padding-left:80px;
       }
       &:nth-child(4) {
-        margin-left:40px;
+        padding-left:80px;
       }
-      @media(max-width: 768px){
+      @media(max-width: 1024px){
         width:50%;
         margin:30px 0;
-        margin-left: 0px;
+        padding-left: 0px;
 
         &:nth-child(3) {
-          margin-left:0px;
+          padding-left:0px;
 
           & .advantage__number{
             order:2;
           }
         }
         &:nth-child(4) {
-          margin-left:0px;
+          padding-left:0px;
 
           & .advantage__number{
             order:2;
@@ -861,14 +862,14 @@ ul.list-circle {
         flex-wrap:wrap;
 
         &:nth-child(3) {
-          margin-left:0px;
+          padding-left:0px;
 
           & .advantage__number{
             order:0;
           }
         }
         &:nth-child(4) {
-          margin-left:0px;
+          padding-left:0px;
 
           & .advantage__number{
             order:0;
@@ -890,7 +891,7 @@ ul.list-circle {
     line-height: 100px;
     color: rgba(37, 37, 37, 0.09);
     
-    @media(max-width: 768px){
+    @media(max-width: 1024px){
        min-width: 210px;
     }
     @media(max-width: 480px){
@@ -1399,7 +1400,7 @@ ul.list-circle {
           width:220px;
 
           & span {
-            font-weight: bold;
+            font-weight: 500;
             font-size: 14px;
             line-height: 140%;
             margin-bottom:20px;
@@ -1448,7 +1449,7 @@ ul.list-circle {
           width:220px;
 
           & span {
-            font-weight: bold;
+            font-weight: 500;
             font-size: 14px;
             line-height: 140%;
             margin-bottom:20px;
