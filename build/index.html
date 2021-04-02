@@ -103,7 +103,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="subtitle">Просто оставьте заявку и получите подробную <br> консультацию по подбору через 5 минут.</div>
             </div>
             <div class="col-2">
-              <form action="post"><input type="tel" required="required" placeholder="+7 (___)___-__-__"><input class="btn" type="submit" value="Свяжитесь со мной"></form>
+              <form class="form" id="form" action="post"><input type="tel" required="required" name="phone" placeholder="+7 (___)___-__-__"><input type="hidden" name="formData" id="formData" value="Сообщение с сайта GUARA. Форма: Свяжитесь со мной"><input class="btn" type="submit" value="Свяжитесь со мной"></form>
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <p class="step1">Тогда просто прикрепите его к форме</p>
               <p class="step3">Поля отмеченные * обязательны для заполнения</p>
               <p class="step4">Поля отмеченные * обязательны для заполнения</p>
-              <form>
+              <form class="form-calc" id="form-calc">
                 <div class="input__wrapper step1"><input class="input input__file" type="file" name="file" id="input__file"><label class="input__file-button" for="input__file"><span class="input__file-icon-wrapper"><img class="input__file-icon" src="img/download.svg" alt="icon" width="25" height="26"></span><span class="input__file-button-text">Загрузить файл</span></label></div>
                 <div class="col-1 step1">
                   <div class="title">Размещение камеры</div>
@@ -228,7 +228,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 </div><a class="btn step1" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a>
                 <div class="btns"><a class="back step2" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><a class="btn step2" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a></div>
                 <div class="btns"><a class="back step3" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><a class="btn step3" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a></div>
-                <div class="btns"><a class="back step4" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><input class="btn button step4" type="submit" value="Отправить"></div>
+                <div class="btns"><a class="back step4" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><input type="hidden" name="formData1" id="formData1" value="Сообщение с сайта GUARA. Форма расчета"><input class="btn button step4" type="submit" value="Отправить"></div>
               </form>
             </div>
           </div>
@@ -262,8 +262,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="subtitle">Оставив заявку на нашем сайте Вам не придется звонить в десятки организаций, и задавать одни и те же вопросы.</div><img class="product-img" src="img/holod_bot.png" alt="brand" width="710" height="525">
             </div>
             <div class="col-2">
-              <form action="">
-                <div class="form-title">Оставить заявку</div><label for="name">Ваше имя</label><input id="name" type="text"><label for="phone">Ваш телефон</label><input id="phone" type="tel" placeholder="+7 (___)___-__-__"><label for="mail">Ваша почта</label><input id="mail" type="text"><input class="btn" type="submit" value="Свяжитесь со мной">
+              <form class="form-1" id="form-1" action="">
+                <div class="form-title">Оставить заявку</div><label for="name">Ваше имя</label><input id="name" type="text" name="name"><label for="phone">Ваш телефон</label><input id="phone" type="tel" name="phone" placeholder="+7 (___)___-__-__"><label for="mail">Ваша почта</label><input id="mail" type="text" name="mail"><input type="hidden" name="formData2" id="formData2" value="Сообщение с сайта GUARA. Форма обратной связи"><input class="btn" type="submit" value="Свяжитесь со мной">
                 <div class="form-agreement"><label class="checkbox-other" for="agreement"> <input class="required" id="agreement" type="checkbox" required="required" name="agreement" checked="checked"><span>Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span></label></div>
               </form>
             </div>
@@ -308,8 +308,8 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
             <h4 class="modal__title"></h4>
           </div>
           <div class="modal__body">
-            <form action="">
-              <div class="form-title">Узнать подробности</div><label for="name">Ваше имя</label><input id="name" type="text"><label for="phone">Ваш телефон</label><input id="phone" type="tel" placeholder="+7 (___)___-__-__"><label for="mail">Ваша почта</label><input id="mail" type="text"><input class="btn" type="submit" value="Свяжитесь со мной">
+            <form class="form-1" id="form-1" action="">
+              <div class="form-title">Узнать подробности</div><label for="name">Ваше имя</label><input id="name" type="text" name="name"><label for="phone">Ваш телефон</label><input id="phone" type="tel" name="phone" placeholder="+7 (___)___-__-__"><label for="mail">Ваша почта</label><input id="mail" type="text" name="mail"><input type="hidden" name="formData2" id="formData2" value="Сообщение с сайта GUARA. Форма обратной связи"><input class="btn" type="submit" value="Свяжитесь со мной">
               <div class="form-agreement"><label class="checkbox-other" for="agreement"> <input class="required" id="agreement" type="checkbox" required="required" name="agreement" checked="checked"><span>Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности</span></label></div>
             </form>
           </div>
@@ -335,7 +335,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <p class="step1">Тогда просто прикрепите его к форме</p>
                 <p class="step3">Поля отмеченные * обязательны для заполнения</p>
                 <p class="step4">Поля отмеченные * обязательны для заполнения</p>
-                <form>
+                <form class="form-calc" id="form-calc" action="">
                   <div class="input__wrapper step1"><input class="input input__file" type="file" name="file" id="input__file"><label class="input__file-button" for="input__file"><span class="input__file-icon-wrapper"><img class="input__file-icon" src="img/download.svg" alt="icon" width="25" height="26"></span><span class="input__file-button-text">Загрузить файл</span></label></div>
                   <div class="col-1 step1">
                     <div class="title">Размещение камеры</div>
@@ -365,11 +365,11 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                       <div class="col-2"> <span>Объем помещения (Д*Ш*В) *</span><input class="text" id="ob" name="ob" type="text" autocomplete="off"><span>Утепление</span>
                         <div><input class="radio" id="ut" type="radio" name="ut" checked="checked"><label for="ut">Пенополиуретан</label></div>
                         <div><input class="radio" id="ut" type="radio" name="ut" checked="checked"><label for="ut">Пенополистерол</label></div><span>Толщина утепления, мм</span>
-                        <div><input class="radio" id="tol" type="radio" name="tol" checked="checked"><label for="ut">60</label></div>
-                        <div><input class="radio" id="tol" type="radio" name="tol" checked="checked"><label for="ut">80</label></div>
-                        <div><input class="radio" id="tol" type="radio" name="tol" checked="checked"><label for="ut">100</label></div>
+                        <div><input class="radio" id="tol" type="radio" name="tol" checked="checked"><label for="tol">60</label></div>
+                        <div><input class="radio" id="tol" type="radio" name="tol" checked="checked"><label for="tol">80</label></div>
+                        <div><input class="radio" id="tol" type="radio" name="tol" checked="checked"><label for="tol">100</label></div>
                       </div>
-                      <div class="col-2"><span>Продукт хранения *</span><input class="text" id="pr" name="pr" type="text" autocomplete="off"><span>Объем продукта, кг *</span><input class="text" id="ob" name="ob" type="text" autocomplete="off"><span>Температура в камере *</span><input class="text" id="tkam" name="tkam" type="text" autocomplete="off"><span>Город *</span><input class="text" id="sity" name="sity" type="text" autocomplete="off"></div>
+                      <div class="col-2"><span>Продукт хранения *</span><input class="text" id="pr" name="pr" type="text" autocomplete="off"><span>Объем продукта, кг *</span><input class="text" id="obq" name="obq" type="text" autocomplete="off"><span>Температура в камере *</span><input class="text" id="tkam" name="tkam" type="text" autocomplete="off"><span>Город *</span><input class="text" id="sity" name="sity" type="text" autocomplete="off"></div>
                     </div>
                   </div>
                   <div class="step4">
@@ -382,7 +382,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                   </div><a class="btn step1" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a>
                   <div class="btns"><a class="back step2" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><a class="btn step2" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a></div>
                   <div class="btns"><a class="back step3" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><a class="btn step3" href="#">Следующий шаг<img src="img/arrow.svg" alt="следующий шаг" width="29" height="24"></a></div>
-                  <div class="btns"><a class="back step4" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><input class="btn button step4" type="submit" value="Отправить"></div>
+                  <div class="btns"><a class="back step4" href="#"> <img src="img/arrow_white.svg" alt="назад" width="29" height="24">Назад</a><input type="hidden" name="formData1" id="formData1" value="Сообщение с сайта GUARA. Форма расчета"><input class="btn button step4" type="submit" value="Отправить"></div>
                 </form>
               </div>
             </div>

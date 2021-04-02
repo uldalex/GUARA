@@ -93,8 +93,9 @@ html(class='page  no-js', lang='ru')
                 h3 Требуется нетиповое и нестандартное холодильное оборудование?
                 .subtitle Просто оставьте заявку и получите подробную <br> консультацию по подбору через 5 минут.
               .col-2
-                form(action="post")
-                  input(type="tel" required="required" placeholder="+7 (___)___-__-__") 
+                form.form#form(action="post")
+                  input(type="tel" required="required" name="phone" placeholder="+7 (___)___-__-__") 
+                  input(type="hidden" name="formData" id="formData" value="Сообщение с сайта GUARA. Форма: Свяжитесь со мной")
                   input.btn(type="submit" value="Свяжитесь со мной")
         section.advantage
           img.parallax1.parallax1--1(src='img/list1.png', alt='Logo', width='200px', height='146px')
@@ -167,7 +168,7 @@ html(class='page  no-js', lang='ru')
                 p.step1 Тогда просто прикрепите его к форме
                 p.step3 Поля отмеченные * обязательны для заполнения
                 p.step4 Поля отмеченные * обязательны для заполнения
-                form
+                form.form-calc#form-calc
                   .input__wrapper.step1
                      input(type="file" name="file" id="input__file" class="input input__file")
                      label.input__file-button(for="input__file")
@@ -280,6 +281,7 @@ html(class='page  no-js', lang='ru')
                     a.back.step4(href="#") 
                       img(src='img/arrow_white.svg', alt='назад', width='29', height='24')
                       | Назад
+                    input(type="hidden" name="formData1" id="formData1" value="Сообщение с сайта GUARA. Форма расчета")
                     input.btn.button.step4(type="submit" value="Отправить")
                   
 
@@ -330,14 +332,15 @@ html(class='page  no-js', lang='ru')
                 .subtitle Оставив заявку на нашем сайте Вам не придется звонить в десятки организаций, и задавать одни и те же вопросы.
                 img.product-img(src='img/holod_bot.png', alt='brand', width='710', height='525') 
               .col-2
-                form(action="")
+                form.form-1#form-1(action="")
                   .form-title Оставить заявку
                   label(for="name") Ваше имя
-                  input#name(type="text") 
+                  input#name(type="text" name="name") 
                   label(for="phone") Ваш телефон
-                  input#phone(type="tel" placeholder="+7 (___)___-__-__")
+                  input#phone(type="tel" name="phone" placeholder="+7 (___)___-__-__")
                   label(for="mail") Ваша почта
-                  input#mail(type="text")
+                  input#mail(type="text" name="mail")
+                  input(type="hidden" name="formData2" id="formData2" value="Сообщение с сайта GUARA. Форма обратной связи")
                   input.btn(type="submit" value="Свяжитесь со мной")
                   .form-agreement
                     label.checkbox-other(for="agreement")  
@@ -357,14 +360,15 @@ html(class='page  no-js', lang='ru')
       +to-top()
       +modal("zakaz","")
         .modal__body 
-          form(action="")
+          form.form-1#form-1(action="")
                   .form-title Узнать подробности
                   label(for="name") Ваше имя
-                  input#name(type="text") 
+                  input#name(type="text" name="name") 
                   label(for="phone") Ваш телефон
-                  input#phone(type="tel" placeholder="+7 (___)___-__-__")
+                  input#phone(type="tel" name="phone" placeholder="+7 (___)___-__-__")
                   label(for="mail") Ваша почта
-                  input#mail(type="text")
+                  input#mail(type="text" name="mail")
+                  input(type="hidden" name="formData2" id="formData2" value="Сообщение с сайта GUARA. Форма обратной связи")
                   input.btn(type="submit" value="Свяжитесь со мной")
                   .form-agreement
                     label.checkbox-other(for="agreement")  
@@ -388,7 +392,7 @@ html(class='page  no-js', lang='ru')
                 p.step1 Тогда просто прикрепите его к форме
                 p.step3 Поля отмеченные * обязательны для заполнения
                 p.step4 Поля отмеченные * обязательны для заполнения
-                form
+                form.form-calc#form-calc(action="")
                   .input__wrapper.step1
                      input(type="file" name="file" id="input__file" class="input input__file")
                      label.input__file-button(for="input__file")
@@ -443,18 +447,18 @@ html(class='page  no-js', lang='ru')
                         span Толщина утепления, мм
                         div
                           input#tol.radio(type="radio"  name="tol" checked="checked" )
-                          label(for="ut") 60
+                          label(for="tol") 60
                         div
                           input#tol.radio(type="radio"  name="tol" checked="checked" )
-                          label(for="ut") 80
+                          label(for="tol") 80
                         div
                           input#tol.radio(type="radio"  name="tol" checked="checked" )
-                          label(for="ut") 100
+                          label(for="tol") 100
                       .col-2
                         span Продукт хранения *
                         input#pr.text( name="pr" type="text" autocomplete="off")
                         span Объем продукта, кг *
-                        input#ob.text( name="ob" type="text" autocomplete="off")
+                        input#obq.text( name="obq" type="text" autocomplete="off")
                         span Температура в камере *
                         input#tkam.text( name="tkam" type="text" autocomplete="off")
                         span Город *
@@ -501,6 +505,7 @@ html(class='page  no-js', lang='ru')
                     a.back.step4(href="#") 
                       img(src='img/arrow_white.svg', alt='назад', width='29', height='24')
                       | Назад
+                    input(type="hidden" name="formData1" id="formData1" value="Сообщение с сайта GUARA. Форма расчета")
                     input.btn.button.step4(type="submit" value="Отправить")
             
          

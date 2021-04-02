@@ -338,5 +338,51 @@ $(window).scroll(function() {
     
   });
   $("input[type=tel]").mask("+7(999) 999-99-99");
+
+  $(".form").submit(function () { // ID формы
+		var formID = $(this).attr('id');
+		var formNm = $('#' + formID);
+		$.ajax({
+			type: "POST",
+			url: 'send.php',// адрес обработчика
+			data: formNm.serialize(),
+			success: function (data) {
+				$(formNm).html(data);
+			},
+			error: function (jqXHR, text, error) {
+				$(formNm).html(error);
+			}
+		}); return false;
+	});
+  $(".form-calc").submit(function () { // ID формы
+		var formID = $(this).attr('id');
+		var formNm = $('#' + formID);
+		$.ajax({
+			type: "POST",
+			url: 'send-calc.php',// адрес обработчика
+			data: formNm.serialize(),
+			success: function (data) {
+				$(formNm).html(data);
+			},
+			error: function (jqXHR, text, error) {
+				$(formNm).html(error);
+			}
+		}); return false;
+	});
+  $(".form-1").submit(function () { // ID формы
+		var formID = $(this).attr('id');
+		var formNm = $('#' + formID);
+		$.ajax({
+			type: "POST",
+			url: 'send-calc.php',// адрес обработчика
+			data: formNm.serialize(),
+			success: function (data) {
+				$(formNm).html(data);
+			},
+			error: function (jqXHR, text, error) {
+				$(formNm).html(error);
+			}
+		}); return false;
+	});
 });
 
